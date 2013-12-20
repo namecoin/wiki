@@ -29,3 +29,17 @@ If you want to skip the -deamon flag you can run:
 ### Download
 ***
 [Download](http://dot-bit.org) namecoin from the homepage and extract the archive. 
+
+### Configuration
+***
+Start namecoind to create the config folder: 
+
+<table>
+<th>Configuration File Location</th>
+<tr>
+<td>Windows</td><td>%APPDATA%\namecoin</td>
+</tr>
+<tr>
+<td>Linux</td><td>~/.namecoin</td>
+</tr>
+</table>
