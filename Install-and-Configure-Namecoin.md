@@ -4,14 +4,14 @@ This is a quick way to get namecoind running on your Linux machine.
 Download & extract the archive and create initial configuration files by executing namecoind:
 
 
-```Bash
+```Shell
 wget -O /tmp/namecoin.tgz http://dot-bit.org/files/namecoin_linux`getconf LONG_BIT`.tgz
 tar xfz /tmp/namecoin.tgz -C ~/usr/local/bin/
 ```
 
 Fill in the configuration:
 
-```Bash
+```Shell
 mkdir ~/.namecoin && \
 echo "rpcuser=`whoami` \n\
 rpcpassword=`openssl rand -hex 20` \n\
@@ -25,3 +25,7 @@ And finally start namecoind:
 If you want to skip the -deamon flag you can run:
 
 `echo "daemon=1" >> ~/.namecoin/namecoin.conf`
+
+### Download
+***
+[Download](http://dot-bit.org) namecoin from the homepage and extract the archive. 
