@@ -35,6 +35,21 @@ If you want to skip the -deamon flag you can run:
 Start namecoind to create the config folder: 
 
 <table>
+<th>Executing Namecoind<th>
+<tr><td>Windows</td><td>Open a command prompt, switch to the directory of the extracted file and type
+namecoind</td>
+</tr>
+<tr>
+<td>Linux</td><td>Open a terminal (Ctrl+Alt+T in many desktop environments), switch to the directory of the extracted file and type
+./namecoind</td>
+</tr>
+</table>
+```Shell
+Warning: To use namecoind, you must set rpcpassword=<password>
+in the configuration file: /home/user/.namecoin/namecoin.conf
+If the file does not exist, create it with owner-readable-only file permissions.
+```
+<table>
 <th>Configuration File Location</th>
 <tr>
 <td>Windows</td><td>%APPDATA%\namecoin</td>
