@@ -1,4 +1,4 @@
-## Quick start on Linux
+### Quick start on Linux
 ***
 This is a quick way to get namecoind running on your Linux machine.
 Download & extract the archive and create initial configuration files by executing namecoind:
@@ -11,7 +11,7 @@ tar xfz /tmp/namecoin.tgz -C ~/usr/local/bin/
 
 Fill in the configuration:
 
-```
+```Shell
 mkdir ~/.namecoin && \
 echo "rpcuser=`whoami` \n\
 rpcpassword=`openssl rand -hex 20` \n\
