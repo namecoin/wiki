@@ -3,15 +3,20 @@
 This is a quick way to get namecoind running on your Linux machine.
 Download & extract the archive and create initial configuration files by executing namecoind:
 
-`wget -O /tmp/namecoin.tgz http://dot-bit.org/files/namecoin_linux`getconf LONG_BIT`.tgz
-tar xfz /tmp/namecoin.tgz -C ~/usr/local/bin/`
+
+```Shell
+wget -O /tmp/namecoin.tgz http://dot-bit.org/files/namecoin_linux`getconf LONG_BIT`.tgz
+tar xfz /tmp/namecoin.tgz -C ~/usr/local/bin/
+```
 
 Fill in the configuration:
 
-`mkdir ~/.namecoin && \
+```
+mkdir ~/.namecoin && \
 echo "rpcuser=`whoami` \n\
 rpcpassword=`openssl rand -hex 20` \n\
-rpcport=8336" > ~/.namecoin/namecoin.conf`
+rpcport=8336" > ~/.namecoin/namecoin.conf
+```
 
 And finally start namecoind:
 
