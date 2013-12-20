@@ -94,7 +94,7 @@ To check on the progress of the download, try the namecoin getinfo command from 
 <td>namecoind help</td><td>Show all available commands</td>
 </tr>
 <tr>
-<td>namecoind getinfo</td><td> 	Show various information. blocks value should match the current block count ([152367])(http://explorer.dot-bit.org/stats/block_count.txt)</td>
+<td>namecoind getinfo</td><td> 	Show various information. blocks value should match the current block count ((152367))[http://explorer.dot-bit.org/stats/block_count.txt]</td>
 </tr>
 <tr>
 <td>namecoind listreceivedbyaddress 0 true</td><td>List your Namecoin address on which you can receive Namecoins </td>
@@ -103,6 +103,6 @@ To check on the progress of the download, try the namecoin getinfo command from 
 <td>namecoind getnewaddress</td><td>Create a new Namecoin address </td>
 </tr>
 <tr>
-<td>namecoind name_new d/foobar</td><td>Reserve a domain name. See [this page](http://dot-bit.org/HowToRegisterAndConfigureBitDomains) for detailed instructions on how to register a domain.</td>
+<td>namecoind name_new d/foobar</td><td>Reserve a domain name. See (this page)[http://dot-bit.org/HowToRegisterAndConfigureBitDomains] for detailed instructions on how to register a domain.</td>
 </tr>
 </table>
