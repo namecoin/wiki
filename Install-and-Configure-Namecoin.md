@@ -44,6 +44,9 @@ namecoind</td>
 ./namecoind</td>
 </tr>
 </table>
+
+It will tell you where to create the "namecoin.conf" file.
+
 ```Shell
 Warning: To use namecoind, you must set rpcpassword=<password>
 in the configuration file: /home/user/.namecoin/namecoin.conf
