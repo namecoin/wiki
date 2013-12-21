@@ -1,5 +1,4 @@
-==Generic development compile instructions==
-
+# Generic development compile instructions
 **WARNING**: this method uses the latest development code from the git repo. It that may be UNTESTED, you could LOSE COINS or corrupt your wallets. Back-up your wallet before using this code!
 
 This should work on all Linux based distributions if all dependencies are satisfied. This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
@@ -8,8 +7,7 @@ This should work on all Linux based distributions if all dependencies are satisf
  cd namecoin/src
  make -f makefile.unix namecoind
 ```
-===Dependencies===
-
+# Dependencies
 Namecoind requires the following libraries:
 * OpenSSL 1.0.1c
 * Berkeley DB 4.8.30.NC
@@ -27,11 +25,11 @@ You can find a more detailed list of dependencies for specific distributions and
 * [Mac OS X](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md)
 * [Windows](https://github.com/bitcoin/bitcoin/blob/master/doc/build-msw.md)
 
-==Windows==
+#Windows
 
 See http://dot-bit.org/BuildNamecoinQTFromSource
 
-=== Tips for building from source ===
+#Tips for building from source#
 
 * standard Namecoin/Bitcoin build notes are in with source ~/namecoin/build-*.txt
 * optionally building without upnp support
