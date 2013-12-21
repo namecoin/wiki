@@ -25,8 +25,13 @@ You can find a more detailed list of dependencies for specific distributions and
 * [Mac OS X](https://github.com/bitcoin/bitcoin/blob/master/doc/build-osx.md)
 * [Windows](https://github.com/bitcoin/bitcoin/blob/master/doc/build-msw.md)
 
-#Windows
-See http://dot-bit.org/BuildNamecoinQTFromSource
+##Windows
+
+###Namecoin-QT
+
+EasyWinBuilder scripts have be included in the contrib folder of the [https://github.com/namecoinq/namecoinq source archive] since v0.3.71c.
+
+To build take a look at the readme.md in that folder and then simply double click "__all_easywinbuilder.bat" and follow instructions. Besides installation of the build environment (MinGW and Qt) everything will build automatically (namecoind.exe and namecoin-qt.exe).
 
 ##Tips for building from source
 * standard Namecoin/Bitcoin build notes are in with source ~/namecoin/build-*.txt
