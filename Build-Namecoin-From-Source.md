@@ -1,7 +1,7 @@
 ## Generic development compile instructions
 **WARNING**: this method uses the latest development code from the git repo. It that may be UNTESTED, you could LOSE COINS or corrupt your wallets. Back-up your wallet before using this code!
 
-This should work on all Linux based distributions if all dependencies are satisfied. This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
+This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
 ```
  git clone https://github.com/namecoin/namecoin.git
  cd namecoin/src
