@@ -7,6 +7,7 @@ This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
  cd namecoin/src
  make -f makefile.unix namecoind
 ```
+
 ## Dependencies
 Namecoind requires the following libraries:
 * OpenSSL 1.0.1c
@@ -15,7 +16,6 @@ Namecoind requires the following libraries:
 * miniupnpc 1.6 (optional)
 
 Namecoin-QT requires the following additional libraries:
-
 * qt 4.8.
 * protobuf 2.5.0
 * libqrencode 3.2.0
@@ -26,11 +26,9 @@ You can find a more detailed list of dependencies for specific distributions and
 * [Windows](https://github.com/bitcoin/bitcoin/blob/master/doc/build-msw.md)
 
 #Windows
-
 See http://dot-bit.org/BuildNamecoinQTFromSource
 
-#Tips for building from source#
-
+##Tips for building from source
 * standard Namecoin/Bitcoin build notes are in with source ~/namecoin/build-*.txt
 * optionally building without upnp support
  make -f makefile.unix USE_UPNP=''
