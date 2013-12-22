@@ -2,7 +2,7 @@
 **WARNING**: this method uses the latest development code from the git repo. It that may be UNTESTED, you could LOSE COINS or corrupt your wallets. Back-up your wallet before using this code!
 
 This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
-```
+```Shell
  git clone https://github.com/namecoin/namecoin.git
  cd namecoin/src
  make -f makefile.unix namecoind
