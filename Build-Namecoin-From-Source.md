@@ -29,7 +29,7 @@ You can find a more detailed list of dependencies for specific distributions and
 
 ###Namecoin-QT
 
-EasyWinBuilder scripts have be included in the contrib folder of the [https://github.com/namecoinq/namecoinq source archive] since v0.3.71c.
+EasyWinBuilder scripts have be included in the contrib folder of the (source archive)[https://github.com/namecoinq/namecoinq] since v0.3.71c.
 
 To build take a look at the readme.md in that folder and then simply double click "__all_easywinbuilder.bat" and follow instructions. Besides installation of the build environment (MinGW and Qt) everything will build automatically (namecoind.exe and namecoin-qt.exe).
 
