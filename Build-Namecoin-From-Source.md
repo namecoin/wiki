@@ -3,9 +3,9 @@
 
 This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.
 ```Shell
- git clone https://github.com/namecoin/namecoin.git
- cd namecoin/src
- make -f makefile.unix namecoind
+git clone https://github.com/namecoin/namecoin.git
+cd namecoin/src
+make -f makefile.unix namecoind
 ```
 
 ## Dependencies
