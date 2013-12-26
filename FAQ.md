@@ -14,6 +14,7 @@ The code is based on Bitcoin. The block chain is separate, starting from a diffe
     "value" : "what you want",
     "expires_in" : 10227
 },`
+
 ## What are the similarities with Bitcoin?
 * 21 millions namecoins maximum, minus the lost coins.
 * 50 coins are generated each block, each 210000 blocks (around 4 years), divide the reward by two.
