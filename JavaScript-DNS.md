@@ -1,6 +1,6 @@
 JavaScript DNS is a client-side/browser DNS resolver which complies with the Namecoin [[domain name specification]].  This is the specification outlining the expected behavior of a jsDNS and any related APIs.
 
-Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, terrible puns, poor grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
+Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, painful puns, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
 
 # Preamble
 You should totally skip this section!
