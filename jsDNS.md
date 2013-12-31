@@ -19,6 +19,7 @@ There are many, many problems with these choices.  Here are some of them:
 So why not just install Namecoin?  Well, telling people to install software/change a system setting hasn't worked very well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), or any [other alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have popped in the past ~20 years.
 
 Not impressed with my bullet points?  Here's a feature matrix!
+
 | Backend                | DNS Resolver                         | End-user requirements | Linkable by ICANN sites | Absolute .alt URL   | Direct Https | Verifiable Privacy | Scaling | Additional .alt website config | DMCA Liability | Domain Seizure Reistantance | SOPA Passive Censorship Resistance | Chinese National Firewall Censorship Resistance
 | :--------------------  | :----------------------------------: | :-------------------: | :---------------------: | :-----------------: | :----------: | :----------------: | :-----: | :----------------------------: | :------------: | :-------------------------: | :--------------------------------: | :---------------------------------------------: |
 | Custom DNS/User Config | DNS Servers                          | Sys Config            | No                      | Full                | Full         |  No          |  Log          |  None          |  Linking          |  Full          |  Partial          |  Minimal |
