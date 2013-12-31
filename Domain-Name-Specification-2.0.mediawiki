@@ -1,13 +1,4 @@
-This page has not yet been migrated to the [https://github.com/namecoin/namecoin/wiki/Install-and-Configure-Namecoin new wiki] but it may have been partially moved or simply out of date. Instead of editing this page, please take a moment and help move it to the new wiki.
-
-__TOC__
-
-This is a DRAFT proposal for an extended specification for the domain application of [[Namecoin]]. In the meantime, [[HowToRegisterAndConfigureBitDomains|you can configure your domain with the current specification]].
-
-Please join in with your ideas [[Talk:Domain names|here]], on the [http://dot-bit.org/forum/index.php forum] or the IRC (<tt>#namecoin@freenode</tt>).
-
-Our basic goals are:
-
+== Goals of this Specification ==
 * Standardized support for most, if not all<sup>1</sup>, DNS record types.
 * Ability to provide alternative mappings for non-IP networks, to be processed by proxy servers.
 * Allowing delegation of the domain or sub-domains to master NS servers, while still providing support for non-IP networks.
