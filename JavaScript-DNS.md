@@ -2,9 +2,7 @@ JavaScript DNS is a client-side/browser DNS resolver which complies with the Nam
 
 Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, painful puns, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
 
-# Preamble
-You should totally skip this section!
-## Why Bother
+# Why Bother
 Let's say you want to bridge two DNS roots, like, I don't know ... ICANN and Namecoin.  Previously, you had two basic options:
 
 1. Mirror the content (we are going to lump generic URL forwarding into this category, as it's basically the same thing legally speaking).
