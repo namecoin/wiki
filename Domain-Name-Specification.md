@@ -1,3 +1,3 @@
-This should point to the latest domain name specification but I am unable to get the `[[include:pagename]]` syntax to work.
+This should point to the latest domain name specification ([[Domain Name Specification 2.0]]) but I am unable to get the `[[include:pagename]]` [syntax](https://github.com/gollum/gollum/wiki#include-other-pages) to work.
 
-[[Domain Name Specification 2.0]]
+[[include|Domain Name Specification 2.0]] 
