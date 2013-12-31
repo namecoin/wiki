@@ -4,21 +4,28 @@ JavaScript DNS is a client-side/browser DNS resolver which complies with the Nam
 Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, painful puns, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
 
 # Why Bother
-Let's say you want to bridge two DNS roots, like, I don't know ... ICANN and Namecoin.  Previously, you had two basic options:
+Let's say you want to bridge the the ICANN and Namecoin DNS'.  The basic approach is to replace a Namecoin [Top Level Domain](http://en.wikipedia.org/wiki/Top-level_domain) (i.e. `.bit`) with an ICANN Second Level Domain (i.e. `.bit.pe`).  Previously, you had to choose one of three backends:
 
-1. Mirror the content (we are going to lump generic URL forwarding into this category, as it's basically the same thing legally speaking).
-2. Proxy the content.
+1. Proxy the content.
+2. Mirror the content.
+3. Mirror Nameservers/URL forwarding  (basically the same thing legally: linking to content).
 
 There are many, many problems with these choices.  Here are some of them:
 
 * They either link to or host content that will piss off [idiotic judges](http://en.wikipedia.org/wiki/Bank_Julius_Baer_vs._WikiLeaks), equally idiotic [politicians](http://wikileaks.org/tpp/#QQC12), and [evil lawyers](http://www.chillingeffects.org/domain/faq.cgi#QID226).
-* Web-proxies are crazy insecure, both the client _and_ the origin server have trust the proxy to decrypt and re-encrypt everything.
-* Both options scale linearly: for every request on the .bit namespace a single charity-driven website has to respond.  With a jsDNS, you can have a **single static web-page** which scales at log(n) (aka [webscale](http://www.mongodb-is-web-scale.com/)!!!!!).
+* Web-proxies are crazy insecure: both the client _and_ the origin server have trust the proxy to decrypt and re-encrypt everything.  It's not _like_ a man-in-the-middle-attack, it _is_ a man-in-the-middle attack.
+* They all scale poorly: for every request on the .bit namespace a single charity-driven website has to respond.  With a jsDNS, you can have a **single static web-page** which [scales at log(n)](https://docs.google.com/spreadsheet/ccc?key=0Am9LbxJR3-Q-dFQ3c2lJa1BVejdrT2JnZjBRWm83YlE&usp=sharing) (aka [webscale](http://www.mongodb-is-web-scale.com/)!!!!!).
 
 So why not just install Namecoin?  Well, telling people to install software/change a system setting hasn't worked very well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), or any [other alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have popped in the past ~20 years.
 
 Not impressed with my bullet points?  Here's a feature matrix!
-
+| Backend                | DNS Resolver                         | End-user requirements | Linkable by ICANN sites | Absolute .alt URL   | Direct Https | Verifiable Privacy | Scaling | Additional .alt website config | DMCA Liability | Domain Seizure Reistantance | SOPA Passive Censorship Resistance | Chinese National Firewall Censorship Resistance
+| :--------------------  | :----------------------------------: | :-------------------: | :---------------------: | :-----------------: | :----------: | :----------------: | :-----: | :----------------------------: | :------------: | :-------------------------: | :--------------------------------: | :---------------------------------------------: |
+| Custom DNS/User Config | DNS Servers                          | Sys Config            | No                      | Full                | Full         |  No          |  Log          |  None          |  Linking          |  Full          |  Partial          |  Minimal |
+| Proxy                  | Webhost                              | None                  | Yes                     | Partial-Full        | None   |  No          |  No          |  Linear          |  None          |  Linking          |  Partial          |  Minimal          |  Minimal
+| Mirror/NS              | Server                               | None                  | Yes                     | Partial-Full        | Full          |  Yes          |  No          |  Sub-Linear          |  None          |  Linking, hosting          |  Partial          |  Minimal          |  Minimal
+| jsDNS Best-Effort | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes | None-partial |  None          |  Yes          |  Yes          |  Constant          |  Dedicated IP          |  None          |  Full          |  Minimal-Full          |  Minimal
+| Cooperative jsDNS | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Full | Full |  Yes |  No          |  Constant          |  Dedicated IP, CORS and/or JS          |  None          |  Full          |  Minimal-Full          |  Minimal
 # Scenarios
 
 In designing products, it helps to imagine a few real life stories of how actual (stereotypical) people would use them. We'll look at two scenarios.
