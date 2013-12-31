@@ -28,6 +28,10 @@ Not impressed with my bullet points?  Check out this biased, out-of-context feat
 | jsDNS Best-Effort      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | None                | Full         | Yes                 | Constant  | Dedicated IP or ICANN URL              | None             | Full                        | Minimal-Full                       | Minimal
 | Cooperative jsDNS      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | Full                | Full         | No (maybe)          | Constant  | Dedicated IP or ICANN URL + JS include | None             | Full                        | Minimal-Full                       | Minimal
 
+# Joel Spolsky's excellent [specification specification template](http://www.joelonsoftware.com/articles/fog0000000035.html)
+
+I'm lazy, and that Markdown table took FOREVER.  So, you can read the rest of this but it is just a generic software spec template.
+
 In designing products, it helps to imagine a few real life stories of how actual (stereotypical) people would use them. We'll look at two scenarios.
 
 Scenario 1: Mike.
