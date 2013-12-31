@@ -15,5 +15,5 @@ There are many, many problems with these choices.  Here are three of them:
 2. Web-proxies are crazy insecure, both the client _and_ the origin server have trust the proxy to decrypt and re-encrypt everything.
 3. Both options scale linearly: for every request on the .bit namespace a single charity-driven website has to respond.  With a jsDNS, you can have a **single static web-page** which scales at log(n) (aka [webscale](http://www.mongodb-is-web-scale.com/)!!!!!).
 
-## So install Namecoin!
-Right, because telling people to install/change a system setting has worked so well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), [and every other Alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have pooped up over the past ~20 years.
+## So Install Namecoin!
+Right, because telling people to install software/change a system setting has worked so well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), [and every other alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have popped in the past ~20 years.
