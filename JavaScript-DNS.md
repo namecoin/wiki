@@ -9,9 +9,9 @@ Let's say you want to bridge two DNS roots, like, I don't know ... ICANN and Nam
 2. Proxy the content.
 
 There are many, many problems with these choices.  Here are three of them:
+
 1. They either link to or host content that will piss off [idiotic judges](http://en.wikipedia.org/wiki/Bank_Julius_Baer_vs._WikiLeaks), equally idiotic [politicians](http://wikileaks.org/tpp/#QQC12), and [evil lawyers](http://www.chillingeffects.org/domain/faq.cgi#QID226).
 2. Web-proxies are crazy insecure, both the client _and_ the origin server have trust the proxy to decrypt and re-encrypt everything.
 3. Both options scale linearly: for every request on the .bit namespace a single charity-driven website has to respond.  With a jsDNS, you can have a **single static web-page** which scales at log(n) (aka [webscale](http://www.mongodb-is-web-scale.com/)!!!!!).
 
-## So Install Namecoin!
-Right, because telling people to install software/change a system setting has worked so well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), [and every other alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have popped in the past ~20 years.
+So why not just install Namecoin?  Well, telling people to install software/change a system setting hasn't worked very well for [AlterNic](http://en.wikipedia.org/wiki/AlterNIC), [OpenNIC](http://www.opennicproject.org/), or any [other alternative DNS system](http://en.wikipedia.org/wiki/Alternative_DNS_root) to have popped in the past ~20 years.
