@@ -4,11 +4,11 @@ JavaScript DNS is a client-side/browser DNS resolver which complies with the Nam
 Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, painful puns, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
 
 # Why Bother
-Let's say you want to bridge the the ICANN and Namecoin DNS'.  The basic approach is to replace a Namecoin [Top Level Domain](http://en.wikipedia.org/wiki/Top-level_domain) (i.e. `.bit`) with an ICANN Second Level Domain (i.e. `.bit.pe`).  Previously, you had to choose one of three backends:
+Let's say you want to bridge the the ICANN and Namecoin DNS'.  The basic approach is to replace a Namecoin [Top Level Domain](http://en.wikipedia.org/wiki/Top-level_domain) (i.e. `.bit`) with an ICANN Second Level Domain (i.e. `.bit.pe`).  Previously, you three ways to accomplish this:
 
 1. Proxy the content.
 2. Mirror the content.
-3. Mirror Nameservers/URL forwarding  (basically the same thing legally: linking to content).
+3. URL forwarding.
 
 There are many, many problems with these choices.  Here are some of them:
 
