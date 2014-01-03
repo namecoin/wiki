@@ -1,7 +1,7 @@
 # Javascript DNS
 JavaScript DNS is a client-side/browser DNS resolver which complies with the Namecoin [[domain name specification]].  This is the specification outlining the expected behavior of a jsDNS and any related APIs.
 
-Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Bad jokes, painful puns, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
+Note that this poorly written specification is written according to [Joel Spolsky's excellent specification specification](http://www.joelonsoftware.com/articles/fog0000000035.html).  Painful puns, bad jokes, sloppy grammar, and revisable facts (i.e. revisions to the spec) lay ahead.
 
 # Why Bother
 Let's say you want to bridge the the ICANN and Namecoin DNS'.  The basic approach is to replace a Namecoin [Top Level Domain](http://en.wikipedia.org/wiki/Top-level_domain) (i.e. `.bit`) with an ICANN Second Level Domain (i.e. `.bit.pe`).  Previously, you three ways to accomplish this:
@@ -29,22 +29,19 @@ Not impressed with my bullet points?  Check out this biased, out-of-context feat
 | Cooperative jsDNS      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | Full                | Full         | No (maybe)          | Constant  | Dedicated IP or ICANN URL + JS include | None             | Full                        | Minimal-Full                       | Minimal
 
 # Use-cases
-Giving context and explaining the shortcomings of the above feature matrix is requires understanding the UX, so let's create a User!
+Giving context and explaining the shortcomings of the above feature matrix requires understanding the user experience, so let's create some users!
 
-Scenario 1: Bustin Jieber
+## Scenario 1: Bustin Jieber
 Bustin' is a hard working musician who likes to read about himself on music blogs.  To that end, he sends a lot of "leaked" mix tapes to the blogs which write about him the most.  Unfortunately, his favorite blog, _JeibersJabbers.com_, had it's domain name seized in a [recent ICE "raid"](https://www.aclu.org/blog/free-speech-national-security-technology-and-liberty/ice-domain-name-seizures-threaten-due) of websites infringing on Bustin's songs.
 
 Thankfully, the Jeibers Jabbers admins got themselves a shiny new .bit domain and told Bustin to check them out at JeibersJabbers.bit.pe.  Bustin types in JeiberJabbers.bit.pe and finds not his favorite music blog but a webpage asking him to login to Facebook, Twitter, or another social network.  Bustin LOVES social networking and he quickly logs in.  Among his thousands of fans on Facebook, the Speech.js script finds a few friends that like a page which publishes links to Namecoin nodes.  Given the high consensus among his fanbase, Speech.js checks the link automatically, the URL it returns a valid record (UXTO/SCP) record, and Speech.js loads the URL in an iFrame.
 
-Scenario 2: Wandy Raterhouse
+##Scenario 2: Wandy Raterhouse
 Wandy is a HUGE fan of Bustin Jieber and was reading about Jiebers pet monkey on JeiberJabbers.bit.  At the end of the article was a huge banner advertising the chance to "Pet Jieber's Monkey."  Wandy obviously clicked on this link but, given the expense of such pets, the admins at JeiberJabbers.bit decided they needed a more secure setup.  When Wandy clicked on the link pointing to store.jeiberjabbers.bit.pe instead redirect the link to store.jeiberjabbers.net, reasoning that they can always change the links to the store if jeiberjabbers.net is seized.
 
-# Joel Spolsky's excellent [specification specification template](http://www.joelonsoftware.com/articles/fog0000000035.html)
+# Non Goals
 
-I'm lazy, and that Markdown table took FOREVER.  So, you can read the rest of this but it is just a generic software spec template.
-
-Non Goals
-
+I'm lazy and that Markdown table took FOREVER.  So, you can read the rest of this but it is just a generic software [specification template](http://www.joelonsoftware.com/articles/fog0000000035.html)
 This version will not support the following features:
 
 multiple time zones for one member. All members are assumed to be in the same time zone.
@@ -112,8 +109,6 @@ Please enter your email address:
 
 
 Enter your password: 
-
-
 
 Forgot your password? Just enter your email address and we'll email it to you.
 
