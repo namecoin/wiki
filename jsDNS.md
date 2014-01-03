@@ -28,19 +28,20 @@ Not impressed with my bullet points?  Check out this biased, out-of-context feat
 | jsDNS Best-Effort      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | None                | Full         | Yes                 | Constant  | Dedicated IP or ICANN URL              | None             | Full                        | Minimal-Full                       | Minimal
 | Cooperative jsDNS      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | Full                | Full         | No (maybe)          | Constant  | Dedicated IP or ICANN URL + JS include | None             | Full                        | Minimal-Full                       | Minimal
 
+# Use-cases
+Giving context and explaining the shortcomings of the above feature matrix is requires understanding the UX, so let's create a User!
+
+Scenario 1: Bustin Jieber
+Bustin' is a hard working musician who likes to read about himself on music blogs.  To that end, he sends a lot of "leaked" mix tapes to the blogs which write about him the most.  Unfortunately, his favorite blog, _JeibersJabbers.com_, had it's domain name seized in a [recent ICE "raid"](https://www.aclu.org/blog/free-speech-national-security-technology-and-liberty/ice-domain-name-seizures-threaten-due) of websites infringing on Bustin's songs.
+
+Thankfully, the Jeibers Jabbers admins got themselves a shiny new .bit domain and told Bustin to check them out at JeibersJabbers.bit.pe.  Bustin types in JeiberJabbers.bit.pe and finds not his favorite music blog but a webpage asking him to login to Facebook, Twitter, or another social network.  Bustin LOVES social networking and he quickly logs in.  Among his thousands of fans on Facebook, the Speech.js script finds a few friends that like a page which publishes links to Namecoin nodes.  Given the high consensus among his fanbase, Speech.js checks the link automatically, the URL it returns a valid record (UXTO/SCP) record, and Speech.js loads the URL in an iFrame.
+
+Scenario 2: Wandy Raterhouse
+Wandy is a HUGE fan of Bustin Jieber and was reading about Jiebers pet monkey on JeiberJabbers.bit.  At the end of the article was a huge banner advertising the chance to "Pet Jieber's Monkey."  Wandy obviously clicked on this link but, given the expense of such pets, the admins at JeiberJabbers.bit decided they needed a more secure setup.  When Wandy clicked on the link pointing to store.jeiberjabbers.bit.pe instead redirect the link to store.jeiberjabbers.net, reasoning that they can always change the links to the store if jeiberjabbers.net is seized.
+
 # Joel Spolsky's excellent [specification specification template](http://www.joelonsoftware.com/articles/fog0000000035.html)
 
 I'm lazy, and that Markdown table took FOREVER.  So, you can read the rest of this but it is just a generic software spec template.
-
-In designing products, it helps to imagine a few real life stories of how actual (stereotypical) people would use them. We'll look at two scenarios.
-
-Scenario 1: Mike.
-Mike is a busy executive. He is the president of a large, important company that makes dynamite-based products for children which are sold through national chains such as Toys 'R' Us. During the course of a typical day, he has many meetings with many very important people. Sometimes a man comes over from the bank to harass him for not paying the interest that was due three months ago on his line of credit. Sometimes another man comes from another bank trying to get him to sign up for another line of credit. Sometimes his venture capitalists (the nice people who gave Mike the money to start his business) visit him to complain that he is earning too much money. "A bonfire!" they demand. "Wall Street likes to see a bonfire!"
-
-These visitors are very upset if Mike has previously promised to meet with them at a certain time, but when that time comes around, Mike is nowhere to be found. This happens because Mike doesn't know what time it is. At his secretary's recommendation, Mike signs up for a WhatTimeIsIt.com account. Now, whenever Mike is wondering about the time, he simply logs onto WhatTimeIsIt.com, enters his username and password, and finds out the current time. He visits the site several times during the day: to find out when it's time for lunch, to check if he's late for the next meeting, etc. Towards the end of the day, in fact, from about 3:00 p.m. onwards, he checks the site increasingly frequently to see when it's time to go home. By 4:45 he's basically just hitting "Refresh" again and again.
-
-Scenario 2: Cindy.
-Cindy is a teenager in high school. She goes to a pretty pathetic public high school, and she's pretty smart, so when she gets home at 2:00 pm, it only takes her about 7 minutes (on average) to do her Algebra homework. None of her other teachers even bother to give her homework. Her baby brother (half brother) is vegged out in front of the only TV set watching Teletubbies, so she spends the afternoon (from 2:07 until about 6:30, when her new mommy serves dinner) surfing the net and chatting with her friends on AOL. She's always looking for exciting new web sites. As a result of typing "What Time Is It?" randomly into a search engine (by mistake, she meant to ask one of her friends using Instant Messenger) she gets to WhatTimeIsIt.com, and sets up a new account. She chooses a user name and "RyanPhillipe" as her password, selects her time zone, and voila -- finds out what time it is.
 
 Non Goals
 
