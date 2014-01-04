@@ -42,13 +42,13 @@ The social networking backend is primarily to avoid directly linking or hosting 
 
 Ratery Wandhouse
 ## Scenario 2: Wandy Raterhouse
-Wandy is a HUGE fan of Justin Beiber and was reading about Beiber's pet monkey on BieberBabble.bit.  At the end of the article was a link to the blog's pet monkey store and (of course) Wandy _needed_ to buy one for himself.  Given the expense of such pets, the admins at BieberBabble.bit decided they needed a more secure setup  So when Wandy clicked on the link pointing to `store.BieberBabble.bit.pe` Speech.js read the record and instead forwarded the **parent** frame the link to `store.jeiberjabbers.net`, reasoning that they can always change the links to the store if jeiberjabbers.net is seized.
+Wandy is a HUGE fan of Justin Bieber and was reading about Bieber's pet monkey on BieberBabble.bit.  At the end of the article was a link to the blog's pet monkey store and (of course) Wandy _needed_ to buy one for himself.  Given the expense of such pets, the admins at BieberBabble.bit decided they needed a more secure setup  So when Wandy clicked on the link pointing to `store.BieberBabble.bit.pe` Speech.js read the record and instead forwarded the **parent** frame the link to `store.jeiberjabbers.net`, reasoning that they can always change the links to the store if jeiberjabbers.net is seized.
 
 ## Scenario 3: Jean Merryd
-For the good of their subjects, the Monarchy of Great Britain has decided to blacklist all [Beiber related material](link).  This is a depressing reality for Jean, a London resident with a major case of Beiber Fever.  When attempting to visit BieberBabble.bit.pe Jean is confonted with an error page stating that the Crown has decided to censor the website.  Initially depressed, the website gave Jean some hope: if she connects the jsDNS with her email or social networking account Jean can visit BieberBabble.bit by visiting `bit.pe#BieberBabble`.  Jean logs into Gmail and the jsDNS sends a PGP encrypted email to BieberBabble admins.  The reply email includes a URL with basic HTTP authentication which the jsDNS stores as the primary source for BeiberBabble.bit DNS information and a secondary source for all other domains.  The jsDNS checks this address and, like magic, receives a signed DNS record with a personalized URL to the site.  This all happens invisibly to Jean whom is reading the latest scoop of BeiberBabble related material within minutes of connecting to her email account.
+For the good of their subjects, the Monarchy of Great Britain has decided to blacklist all [Bieber related material](link).  This is a depressing reality for Jean, a London resident with a major case of Bieber Fever.  When attempting to visit BieberBabble.bit.pe Jean is confonted with an error page stating that the Crown has decided to censor the website.  Initially depressed, the website gave Jean some hope: if she connects the jsDNS with her email or social networking account Jean can visit BieberBabble.bit by visiting `bit.pe#BieberBabble`.  Jean logs into Gmail and the jsDNS sends a PGP encrypted email to BieberBabble admins.  The reply email includes a URL with basic HTTP authentication which the jsDNS stores as the primary source for BieberBabble.bit DNS information and a secondary source for all other domains.  The jsDNS checks this address and, like magic, receives a signed DNS record with a personalized URL to the site.  This all happens invisibly to Jean whom is reading the latest scoop of BieberBabble related material within minutes of connecting to her email account.
 
 ## Scenario 4: Hanah Kal
-Hanah's parents have taste and do not wish their daughter catch Beiber Fever, or at least exhibit signs of it when they are around.  So they install a security program on the family computer that prevents her from opening file sharing programs as well as blocking Beiber related websites and work-arounds like a jsDNS.  Hanah is screwed: she will have to feed her Beiber fever via a sneakernet with her friends at school.  That's okay, however, because those are her parents making rules about use of their computer not blanket censorship of an entire nation.
+Hanah's parents have taste and do not wish their daughter to catch Bieber Fever, or at least exhibit signs of it when they are around.  So they install a security program on the family computer that prevents her from opening file sharing programs as well as blocking Bieber related websites and work-arounds like a jsDNS.  Hanah is screwed: she will have to feed her Bieber fever via a sneakernet with her friends at school.  That's okay, however, because those are her parents making rules about use of their computer not blanket censorship of an entire nation.
 
 # Goal Setting
 The following goals are not likely to be supported in the immediate future:
@@ -77,8 +77,7 @@ Conceptual overview of each step of the routing process goes here.
 # Wireframes
 This is a screen-by-screen mockup of visiting a website using a jsDNS.  Most of the interface is invisible and the exact details of the interface will depend on the backend being used as a DHT, Twitter, Github, and Email all have very different requirements.  This is mostly to elucidate the technical aspects of what happens at each step of the lookup process.
 
-Technical Note
-HTTPS -> HTTP Downgrade
+# Technical Note: HTTPS -> HTTP Downgrade
 
-Open Issue
-Need wording for password email from CEO
+# Technical Note: Scaling
+
