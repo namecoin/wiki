@@ -50,7 +50,6 @@ For the good of their subjects, the Monarchy of Great Britain has decided to [bl
 Hanah's parents have taste and do not wish their daughter to catch Bieber Fever, or at least exhibit signs of it when they are around.  So they install a security program on the family computer that prevents her from opening file sharing programs as well as blocking Bieber related websites and work-arounds like a jsDNS.  Hanah is screwed: she will have to feed her Bieber fever via a sneakernet with her friends at school.  That's okay, however, because those are her parents making rules about use of their computer not blanket censorship of an entire nation.
 
 # Goal Setting
-The following goals are not likely to be supported in the immediate future:
 
 ## Non-Goals
 * Bypassing "active" corporate or national firewalls such as that of China.  
