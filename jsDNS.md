@@ -40,7 +40,6 @@ Thankfully, the BieberBabble admins got themselves a shiny new .bit domain and t
 ###Technical Note
 The social networking backend is primarily to avoid directly linking or hosting any content that could trigger the legal headaches of DMCA-like take-down requests.  The free publicity of online slackervism is very attractive as well.  Even so, using a DHT to bootstrap the client may be preferable.  The legality of the various backends is awaiting clarification.
 
-Ratery Wandhouse
 ## Scenario 2: Wandy Raterhouse
 Wandy is a HUGE fan of Justin Bieber and was reading about Bieber's pet monkey on BieberBabble.bit.  At the end of the article was a link to the blog's pet monkey store and (of course) Wandy _needed_ to buy one for himself.  Given the expense of such pets, the admins at BieberBabble.bit decided they needed a more secure setup  So when Wandy clicked on the link pointing to `store.BieberBabble.bit.pe` Speech.js read the record and instead forwarded the **parent** frame the link to `store.jeiberjabbers.net`, reasoning that they can always change the links to the store if jeiberjabbers.net is seized.
 
@@ -57,8 +56,7 @@ The following goals are not likely to be supported in the immediate future:
 * Bypassing "active" corporate or national firewalls such as that of China.  
 * Bypassing of DNS-level blocking of the resolver site (such as `.bit.pe`, `.spx.is`, or `speech.is`).
 
-## Future Goals
-Future development may enable the following features:
+## (Potential) Future Goals
 
 ###Verification by Child iFrame
 Verification of the parent page's content by the child iframe is not possible in current browsers. This would, however only require a minor extension to the CORS or Frame SECURITY OPTION to enable either read-only access to the parent window's document or a special extension to retrieve hash signatures of the parent page.
