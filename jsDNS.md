@@ -28,7 +28,6 @@ Not impressed with my bullet points?  Check out this biased, out-of-context feat
 | jsDNS Best-Effort      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | None                | Full         | Yes                 | Constant  | Dedicated IP or ICANN URL              | None             | Full                        | Minimal-Full                       | Minimal
 | Cooperative jsDNS      | Client storage, WebHook sourced from social network(s) or DHT | Onetime Social Network Log-In or none | Yes                     | Full                | Full         | No (maybe)          | Constant  | Dedicated IP or ICANN URL + JS include | None             | Full                        | Minimal-Full                       | Minimal
 
-
 #Use-cases
 Giving context and explaining the shortcomings of the above feature matrix requires understanding the user experience, so let's create some users!  Note that the following scenarios are written in an absurdist manner because the examples they are based on are depressingly real.
 
@@ -71,12 +70,16 @@ The above suggestion for routing around IP-level censoring does not anonymize th
 # Flowchart
 Conceptual overview of each step of the routing process goes here.
 
+## Technical Note: HTTPS -> HTTP Downgrade
+## Technical Note: Webworker vs iFrame
+## Technical Note: Scaling
+
 # Wireframes
 This is a screen-by-screen mockup of visiting a website using a jsDNS.  Most of the interface is invisible and the exact details of the interface will depend on the backend being used as a DHT, Twitter, Github, and Email all have very different requirements.  This is mostly to elucidate the technical aspects of what happens at each step of the lookup process.
 
 #Legal Analysis
-## Technical Note: HTTPS -> HTTP Downgrade
-## Technical Note: Scaling
-## Technical Note: Webworker vs iFrame
-## Open Issue: Client-side storage encryption
+
+
+# Open Issues
+## Client-side storage encryption
 
