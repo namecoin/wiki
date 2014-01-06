@@ -1,6 +1,8 @@
 ***
 
-Please help up migrate from the [old wiki](http://dot-bit.org/) install to this one!
+Please help up migrate from the [old wiki](http://dot-bit.org/) install to this one!  [Migration status](https://github.com/namecoin/namecoin/issues/35): ~10%.
+
+
 
 ***
 
