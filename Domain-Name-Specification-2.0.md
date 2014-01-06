@@ -44,9 +44,9 @@ The JSON Object (the ''domain configuration'') is an associative array of config
     "service" : [ ["smtp", "tcp", 10, 0, 25, "mail"] ]
     "tls": {
         "tcp": {
-            443: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
+            443: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
         } {
-            25: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
+            25: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
         }
     }
     "map":
@@ -81,9 +81,9 @@ Below is a list of possible entries. Matching DNS resource record types are also
 | <tt><i>deprecated :</i><br />fingerprint<br />See "tls" below.</tt> | Specifies one or more certificate fingerprints. (see [[#TLS support]]) | - | <tt>"fingerprint": [ "15:91:52:97:10:88:CD:44:9C:F7:23:81:78:C3:50:3B:09:20:56:2A", "63:08:84:E2:79:CB:11:07:F1:FB:8A:6B:11:A6:4D:1B:14:76:3F:8E" ]</tt>
 | <tt>tls</tt> | Specifies one or more certificate fingerprints for specific protocols and ports. Attempts to follow the DANE protocol closely. Adds includeSubdomains.<br />Complete protocol specification http://dot-bit.org/forum/viewtopic.php?f=5&t=1137 | - | <tt><pre>"tls": {
     "tcp": {
-        443: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
+        443: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
     } {
-        25: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
+        25: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
     }
 }</pre></tt>
 
