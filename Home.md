@@ -1,4 +1,3 @@
-
 ***
 
 Please help up migrate from the [old wiki](http://dot-bit.org/) install to this one!
@@ -8,4 +7,4 @@ Please help up migrate from the [old wiki](http://dot-bit.org/) install to this 
 ## Quick Links
 * [[FAQ]]
 * [[Build Namecoin From Source]]
-* [[How to get Namecoins]
+* [[How to get Namecoins]]
