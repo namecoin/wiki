@@ -1,4 +1,4 @@
-== Goals of this Specification ==
+## Goals of this Specification
 * Standardized support for most, if not all<sup>1</sup>, DNS record types.
 * Ability to provide alternative mappings for non-IP networks, to be processed by proxy servers.
 * Allowing delegation of the domain or sub-domains to master NS servers, while still providing support for non-IP networks.
@@ -8,14 +8,14 @@
 <sup>1</sup> <small>Some standard resource records, like SOA, can be derived from other records, and others may not be applicable in a distributed naming service context. Also see [[#TODO]].</small>
 
 
-== Name field ==
+## Name field
 
 Name is a lowercase string, which begins with <tt>d/</tt>, followed by the domain name. Namecoin enabled resolvers will append the default TLD (<tt>.bit</tt>) to the name specified here.
 
-; Example
-: <tt>d/example</tt>
+#### Example
+    `d/example`
 
-The [http://en.wikipedia.org/wiki/IDNA IDNA] standard encoding is used for internationalized domain names. This means that Unicode names need to be converted to ASCII compatible encoding according to IDNA, before registration. This can be done using the <tt>idn</tt> command-line tool:
+The [[IDNA|http://en.wikipedia.org/wiki/IDNA]] standard encoding is used for internationalized domain names. This means that Unicode names need to be converted to ASCII compatible encoding according to IDNA, before registration. This can be done using the <tt>idn</tt> command-line tool:
 <pre>
 $ idn -p Nameprep ŝtelo
 xn--telo-u5a
@@ -23,12 +23,12 @@ xn--telo-u5a
 
 Also, only valid domain names are allowed, which means characters other than lowercase letters, numerics and dash are not allowed, as well as names longer than 63 letters and names starting with a dash.
 
-''(Note: However, since this is a measure against compatibility issues with DNS, names consisting of all numeric values and underscore can be discussed.)''
+> (Note: However, since this is a measure against compatibility issues with DNS, names consisting of all numeric values and underscore can be discussed.)
 
 
-== Value field ==
+## Value field
 
-Value is a UTF&ndash;8 encoded [http://en.wikipedia.org/wiki/JSON#Data_types.2C_syntax_and_example JSON Object] with a maximum size of 1023 bytes, where all entries are case-sensitive.
+Value is a UTF&ndash;8 encoded [[JSON Object|http://en.wikipedia.org/wiki/JSON#Data_types.2C_syntax_and_example]] with a maximum size of 1023 bytes, where all entries are case-sensitive.
 
 The JSON Object (the ''domain configuration'') is an associative array of configuration options of the domain in context. Since sub-domains are also configured via a ''domain configuration'', we will use the word ''domain'' to signify the item that is being configured, even though it may be a sub-domain in the context of the value field.
 
@@ -61,127 +61,53 @@ The JSON Object (the ''domain configuration'') is an associative array of config
 
 Below is a list of possible entries. Matching DNS resource record types are also listed. 
 
-{| cellspacing="8"
-!  align="left" | Type
-!  align="left" | Description
-!  align="left" | DNS
-!  align="left" | Example
-|-
-|  align="left" | <tt>service</tt>
-|  align="left" | Used to identify hosts that support particular services as per DNS <tt>SRV</tt> records. ''(see [[#Service records]])''
-| <tt>SRV</tt>
-|  align="left" | <tt>&quot;service&quot;: [</tt><br /><tt>[&quot;imap&quot;, &quot;tcp&quot;, 0, 0, 143, &quot;mail.host.com.&quot;]</tt><br /><tt>]</tt>
-|-
-|  align="left" | <tt>ip</tt>
-|  align="left" | IPv4 addresses. ''(see [[#Addresses]])''
-| <tt>A</tt>
-|  align="left" | <tt>&quot;ip&quot;: [&quot;192.168.1.1&quot;, &quot;192.168.7.1&quot;]</tt>
-|-
-|  align="left" | <tt>ip6</tt>
-|  align="left" | IPv6 addresses.
-| <tt>AAAA</tt>
-|  align="left" | <tt>&quot;ip6&quot;: [&quot;2001:4860:0:1001::68&quot;]</tt>
-|-
-|  align="left" | <tt>tor</tt>
-|  align="left" | Tor hidden service address.
-| -
-|  align="left" | <tt>&quot;tor&quot;: &quot;eqt5g4fuenphqinx.onion&quot;</tt>
-|-
-|  align="left" | <tt>i2p</tt>
-|  align="left" | Eepsite information. At least one hint is required.
-| -
-|  align="left" | <tt>&quot;i2p&quot;: {</tt><br /><tt>&quot;destination&quot;: &quot;XaZscx...0jGAAAA&quot;</tt><br /><tt>&quot;name&quot;       : &quot;example.i2p&quot;</tt><br /><tt>&quot;b32&quot;        : &quot;ukeu...nkdq.b32.i2p&quot;</tt><br /><tt>}</tt>
-|-
-|  align="left" | <tt>freenet</tt>
-|  align="left" | Freesite Key.
-| -
-|  align="left" | <tt>&quot;freenet&quot;: &quot;USK@0I8g...xbZ4,AQACAAE/Example/42/&quot;</tt>
-|-
-|  align="left" | <tt>alias</tt>
-|  align="left" | Specifies that this name is an alias of the given String, which can either be one of the sub-domain names in context or an absolute domain name. Absolute domain names are signified by an added dot (<tt>.</tt>) in the end. ''(see [[#Domain references]])''
-| <tt>CNAME</tt>
-|  align="left" | <tt>&quot;alias&quot;: &quot;&quot;</tt>
-|-  class="even"
-|  align="left" | <tt>translate</tt>
-|  align="left" | Specifies that all subdomains of this name are translated to the given String before lookup. As with <tt>alias</tt>, absolute domain names end with a dot (<tt>.</tt>). Ex: <tt>&quot;subdomain.test.bit&quot;</tt> could be translated to <tt>&quot;subdomain.otherhost.bit&quot;</tt>.
-| <tt>DNAME</tt>
-|  align="left" | <tt>&quot;translate&quot;: &quot;otherhost.bit.&quot;</tt>
-|-
-|  align="left" | <tt>email</tt>
-|  align="left" | Hostmaster e-mail address. ''(This is recommended at the domain level and will be inserted into the SOA record of DNS bridges; see [[#Implementation]].)''
-| <tt>SOA</tt>, <tt>RP</tt>
-|  align="left" | <tt>&quot;email&quot;: &quot;hostmaster@example.bit&quot;</tt>
-|-
-|  align="left" | <tt>loc</tt>
-|  align="left" | Geographic location information.
-| <tt>LOC</tt>
-|  align="left" | <tt>&quot;loc&quot;: &quot;51 30 12.240 N 0 7 40.254 W 0m&quot;</tt>
-|-
-|  align="left" | <tt>info</tt>
-|  align="left" | A JSON value reserved for registrant information. Recommended at the domain level. ''(see [[#Whois]])''
-| -
-|  align="left" | <tt>&quot;info&quot;: &quot;buyme@example.bit&quot;</tt>
-|-
-|  align="left" | <tt>ns</tt>
-|  align="left" | Array of master nameservers of the configured domain, which can be either IPs or absolute domain names. Note that this delegates all IP related responsibility of this domain and its sub-domains to the master server, effectively bypassing other settings (e.g. <tt>ip</tt>). ''(see [[#Implementation]])''
-| <tt>NS</tt>
-|  align="left" | <tt>&quot;ns&quot;: ["ns.myserver.net", "192.168.3.4"]</tt>
-|-
-|  align="left" | <tt>delegate</tt>
-|  align="left" | Delegates control of this domain to the given Namecoin name, or a sub-domain entry defined within that name. All other entries are ignored. ''(see [[#Importing and delegation]])''
-| [[#Importing and delegation|*]]
-|  align="left" | <tt>&quot;delegate&quot;: [&quot;s/example74845&quot;]</tt>
-|-
-|  align="left" | <tt>import</tt>
-|  align="left" | Imports specified entries from Namecoin names and merges with the current one. ''May be implemented in the future to meet demands about extra space and data sharing.''
-| [[#Importing and delegation|*]]
-|  align="left" | <tt>"import": [ ["d/example", "www"] ]</tt>
-|-
-|  align="left" | <tt>map</tt>
-|  align="left" | Maps sub-domains to their respective configurations. (see [[#Sub-domains]])
-| -
-|  align="left" | <tt>"map": {<br />"www": { "alias" : "www.example.com." },<br />"www2": { "delegate": ["d/example", "www"] }<br />}</tt>
-|-
-|  align="left" | <tt><i>deprecated :</i><br />fingerprint<br />See "tls" below.</tt>
-|  align="left" | Specifies one or more certificate fingerprints. (see [[#TLS support]])
-| -
-|  align="left" | <tt>"fingerprint": [ "15:91:52:97:10:88:CD:44:9C:F7:23:81:78:C3:50:3B:09:20:56:2A", "63:08:84:E2:79:CB:11:07:F1:FB:8A:6B:11:A6:4D:1B:14:76:3F:8E" ]</tt>
-|-
-|  align="left" | <tt>tls</tt>
-|  align="left" | Specifies one or more certificate fingerprints for specific protocols and ports. Attempts to follow the DANE protocol closely. Adds includeSubdomains.<br />Complete protocol specification http://dot-bit.org/forum/viewtopic.php?f=5&t=1137
-| -
-|  align="left" | <tt><pre>"tls": {
+| Type | Description | DNS | Example |
+|:-----|:------------|:----|:--------|
+| <tt>service</tt> | Used to identify hosts that support particular services as per DNS <tt>SRV</tt> records. ''(see [[#Service records]])'' | <tt>SRV</tt> | ```"service": [ ["imap", "tcp", 0, 0, 143, "mail.host.com."] ]```
+| <tt>ip</tt> | IPv4 addresses. ''(see [[#Addresses]])'' | <tt>A</tt> | <tt>&quot;ip&quot;: [&quot;192.168.1.1&quot;, &quot;192.168.7.1&quot;]</tt>
+| <tt>ip6</tt> | IPv6 addresses.  | <tt>AAAA</tt> | <tt>&quot;ip6&quot;: [&quot;2001:4860:0:1001::68&quot;]</tt>
+| <tt>tor</tt> | Tor hidden service address.  | - | <tt>&quot;tor&quot;: &quot;eqt5g4fuenphqinx.onion&quot;</tt>
+| <tt>i2p</tt> | Eepsite information. At least one hint is required.  | - | <tt>&quot;i2p&quot;: {</tt><br /><tt>&quot;destination&quot;: &quot;XaZscx...0jGAAAA&quot;</tt><br /><tt>&quot;name&quot;       : &quot;example.i2p&quot;</tt><br /><tt>&quot;b32&quot;        : &quot;ukeu...nkdq.b32.i2p&quot;</tt><br /><tt>}</tt>
+| <tt>freenet</tt> | Freesite Key.  | - | <tt>&quot;freenet&quot;: &quot;USK@0I8g...xbZ4,AQACAAE/Example/42/&quot;</tt>
+| <tt>alias</tt> | Specifies that this name is an alias of the given String, which can either be one of the sub-domain names in context or an absolute domain name. Absolute domain names are signified by an added dot (<tt>.</tt>) in the end. ''(see [[#Domain references]])'' | <tt>CNAME</tt> | <tt>&quot;alias&quot;: &quot;&quot;</tt>
+| <tt>translate</tt> | Specifies that all subdomains of this name are translated to the given String before lookup. As with <tt>alias</tt>, absolute domain names end with a dot (<tt>.</tt>). Ex: <tt>&quot;subdomain.test.bit&quot;</tt> could be translated to <tt>&quot;subdomain.otherhost.bit&quot;</tt>.  | <tt>DNAME</tt> | <tt>&quot;translate&quot;: &quot;otherhost.bit.&quot;</tt>
+| <tt>email</tt> | Hostmaster e-mail address. ''(This is recommended at the domain level and will be inserted into the SOA record of DNS bridges; see [[#Implementation]].)'' | <tt>SOA</tt>, <tt>RP</tt> | <tt>&quot;email&quot;: &quot;hostmaster@example.bit&quot;</tt>
+| <tt>loc</tt> | Geographic location information.  | <tt>LOC</tt> | <tt>&quot;loc&quot;: &quot;51 30 12.240 N 0 7 40.254 W 0m&quot;</tt>
+| <tt>info</tt> | A JSON value reserved for registrant information. Recommended at the domain level. ''(see [[#Whois]])'' | - | <tt>&quot;info&quot;: &quot;buyme@example.bit&quot;</tt>
+| <tt>ns</tt> | Array of master nameservers of the configured domain, which can be either IPs or absolute domain names. Note that this delegates all IP related responsibility of this domain and its sub-domains to the master server, effectively bypassing other settings (e.g. <tt>ip</tt>). ''(see [[#Implementation]])'' | <tt>NS</tt> | <tt>&quot;ns&quot;: ["ns.myserver.net", "192.168.3.4"]</tt>
+| <tt>delegate</tt> | Delegates control of this domain to the given Namecoin name, or a sub-domain entry defined within that name. All other entries are ignored. ''(see [[#Importing and delegation]])'' | [[#Importing and delegation|*]] | <tt>&quot;delegate&quot;: [&quot;s/example74845&quot;]</tt>
+| <tt>import</tt> | Imports specified entries from Namecoin names and merges with the current one. ''May be implemented in the future to meet demands about extra space and data sharing.'' | [[#Importing and delegation|*]] | <tt>"import": [ ["d/example", "www"] ]</tt>
+| <tt>map</tt> | Maps sub-domains to their respective configurations. (see [[#Sub-domains]]) | - | <tt>"map": {<br />"www": { "alias" : "www.example.com." },<br />"www2": { "delegate": ["d/example", "www"] }<br />}</tt>
+| <tt><i>deprecated :</i><br />fingerprint<br />See "tls" below.</tt> | Specifies one or more certificate fingerprints. (see [[#TLS support]]) | - | <tt>"fingerprint": [ "15:91:52:97:10:88:CD:44:9C:F7:23:81:78:C3:50:3B:09:20:56:2A", "63:08:84:E2:79:CB:11:07:F1:FB:8A:6B:11:A6:4D:1B:14:76:3F:8E" ]</tt>
+| <tt>tls</tt> | Specifies one or more certificate fingerprints for specific protocols and ports. Attempts to follow the DANE protocol closely. Adds includeSubdomains.<br />Complete protocol specification http://dot-bit.org/forum/viewtopic.php?f=5&t=1137 | - | <tt><pre>"tls": {
     "tcp": {
         443: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
     } {
         25: [[1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1]]
     }
 }</pre></tt>
-|}
 
-
-
-=== Addresses ===
+### Addresses
 
 Multiple addresses per domain can be specified using String Arrays. This is currently proposed for only IPv4 and IPv6 but can be extended to other addresses in the future. Multiple addresses will be used for round-robin load distribution.
 
-; Example with multiple IPs
-: <tt>"ip6": ["2001:4860:0:1001::68", "2001:4860:0:1001::69", "2001:4860:0:1001::70"]</tt>
+#### Example with multiple IPs
+    `"ip6": ["2001:4860:0:1001::68", "2001:4860:0:1001::69", "2001:4860:0:1001::70"]`
 
-; Examples with a single IP
-: <tt>"ip6": "2001:4860:0:1001::68"</tt>
-: <tt>"ip6": ["2001:4860:0:1001::68"]</tt>
+#### Examples with a single IP
+    `"ip6": "2001:4860:0:1001::68"`
+    `"ip6": ["2001:4860:0:1001::68"]`
 
 
-=== Domain references ===
+### Domain references
 
 <tt>service</tt>, <tt>alias</tt> and <tt>translate</tt> entries accept references to other domains.
 
 To reference domains in the current context, enter the referenced name as-is, or in the case of inner sub-domains, insert dots (<tt>.</tt>) between names.
 
-; Examples
-: <tt>"www"</tt>
-: <tt>"ftp.eu"</tt>
+#### Examples
+    <tt>"www"</tt>
+    <tt>"ftp.eu"</tt>
 
 An empty String (<tt>&quot;&quot;</tt>) signifies the currently configured domain. In the below example, <tt>www.us.<domain></tt> is an alias for <tt>us.<domain></tt> (and not <tt><domain></tt> itself).
 
@@ -197,9 +123,9 @@ An empty String (<tt>&quot;&quot;</tt>) signifies the currently configured domai
 
 To reference absolute domain names, add a dot (<tt>.</tt>) to the end of the String to signify the root domain.
 
-; Examples
-: <tt>"google.com."</tt>
-: <tt>"ns.example.bit."</tt>
+#### Examples
+    <tt>"google.com."</tt>
+    <tt>"ns.example.bit."</tt>
 
 The <tt>@</tt> character is also an absolute reference, and is converted to the topmost domain of the Namecoin value field that is being configured. For standard domains in the <tt>d/</tt> namespace, that is the domain name (see [[#Importing and delegation]]).
 
@@ -237,16 +163,16 @@ In the above example, <tt>us.domain.bit</tt>, <tt>www.us.domain.bit</tt> and <tt
 
 Also, the wildcard implies that, for instance, <tt>www.domain.bit</tt> is an alias for <tt>domain.bit</tt> and resolves to <tt>8.8.8.8</tt>, but it doesn't imply that <tt>nonexistent.us.domain.bit</tt> will resolve.
 
-=== Importing and delegation ===
+### Importing and delegation
 
 Delegation of domain configuration is made possible by the <tt>delegate</tt> record type. This can be used to extend the space for domain data, better organization, handing over management responsibilities, sharing data between domains, etc.
 
-''Note: The <tt>s/</tt> application specifier is proposed to distinguish non-resolvable domain data from domain names. Other specifiers, like <tt>dd/</tt> for "domain data" can also be considered.''
+> Note: The <tt>s/</tt> application specifier is proposed to distinguish non-resolvable domain data from domain names. Other specifiers, like <tt>dd/</tt> for "domain data" can also be considered.
 
-; Examples
-: <tt>"delegate": ["s/example001"]</tt>
-: <tt>"delegate": ["d/example", "ftp"]</tt>
-: <tt>"delegate": ["s/exampledata99", ""]</tt>
+#### Examples
+    <tt>"delegate": ["s/example001"]</tt>
+    <tt>"delegate": ["d/example", "ftp"]</tt>
+    <tt>"delegate": ["s/exampledata99", ""]</tt>
 
 The referenced Namecoin entry does not have to be in the domain namespace (<tt>"d/"</tt>), and will be treated as a domain configuration JSON Object. The <tt>s/</tt> application specifier is '''proposed''' to distinguish non-resolvable domain data from domain names.
 
@@ -261,9 +187,9 @@ Such delegations override ''all'' other entries, including <tt>ns</tt> and <tt>i
 }
 </pre>
 
-''Note: If the above proposal is accepted, the <tt>delegate</tt> directive would get precedence in the case of <tt>""</tt> sub-domain.''
+> Note: If the above proposal is accepted, the <tt>delegate</tt> directive would get precedence in the case of <tt>""</tt> sub-domain.
 
-''Warning: Details about the below <tt>import</tt> directive aren't clear yet.''
+> Warning: Details about the below <tt>import</tt> directive aren't clear yet.
 
 The <tt>import</tt> directive is provided to simply merge domains from different Namecoin records with the current one. It's an array of references to Namecoin domain entries, which have the same notation as <tt>delegate</tt> references. However, instead of passing the control to the referred configurations, data is imported to the current context and then overridden by explicitly provided entries.
 
@@ -292,13 +218,13 @@ Here, data from <tt>d/shareddata</tt> is imported from within <tt>d/example</tt>
 
 Of course, instead of importing specific subdomains one by one, <tt>"import": [ ["s/shareddata"] ]</tt> could be used in the above example.
 
-=== Service records ===
+### Service records
 
-TODO (see [http://en.wikipedia.org/wiki/SRV_record <tt>SRV</tt> records])
+TODO (see [[SRV records|http://en.wikipedia.org/wiki/SRV_record]])
 
 DNS <tt>MX</tt> records need to be derived from the <tt>service</tt> records for SMTP.
 
-=== TLS support ===
+### TLS support
 
 The traditional TLS trust model is very centralized. The ability to create a certificate for your web site is concentrated in the hands of a select few governments and corporations. By having your site support TLS, you are putting yourself at their mercy. This goes squarely against the principles of decentralization and distributed trust at the core of the Namecoin project.
 
@@ -324,7 +250,7 @@ I'd be interested in someone knowledgeable in DNSSEC commenting on this, and the
 
 --
 
-<span style="font-size: x-small">Ugh, SSL, the kludgy hack that protects no-one.  This has been studied in-depth and it will need to be patched in the [http://www.thoughtcrime.org/blog/ssl-and-the-future-of-authenticity/ browser] ([http://www.youtube.com/watch?v=pDmj_xe7EIQ video overview]), probably using [http://convergence.io concensus from independent nortary systems] and heuristics to check the <b>quality of the security</b>, much like phishing and anti-virus protection.  Bottom line: this problem is much, much bigger than DNS and so will any solutions.  I don't see the harm in defining a mechanism for publishing public keys, but this should be a low priority issue for now.</span> --[[User:Indolering|Indolering]] 05:54, 18 August 2013 (UTC)
+<span style="font-size: x-small">Ugh, SSL, the kludgy hack that protects no-one.  This has been studied in-depth and it will need to be patched in the [[browser|http://www.thoughtcrime.org/blog/ssl-and-the-future-of-authenticity/]] ([[video overview|http://www.youtube.com/watch?v=pDmj_xe7EIQ]]), probably using [http://convergence.io concensus from independent nortary systems] and heuristics to check the <b>quality of the security</b>, much like phishing and anti-virus protection.  Bottom line: this problem is much, much bigger than DNS and so will any solutions.  I don't see the harm in defining a mechanism for publishing public keys, but this should be a low priority issue for now.</span> --[[User:Indolering|Indolering]] 05:54, 18 August 2013 (UTC)
 
 --
 
@@ -343,13 +269,13 @@ In cases 1 and 2 the public half of the key used to self-sign the SSL certificat
 
 --
 
-== Discussion ==
+## Discussion
 
-=== 1023 character value limit ===
+### 1023 character value limit
 
 ...
 
-=== Whois ===
+### Whois
 
 A public Namecoin WHOIS server is available:
 
@@ -357,7 +283,7 @@ $ whois -h whois.namecoin.us example.bit
 
 TODO (Also, fix the <tt>info</tt> examples in the document accordingly.)
 
-=== Legacy support ===
+### Legacy support
 
 Below rules are supported, but will be obsoleted at one point:
 
@@ -366,7 +292,7 @@ Below rules are supported, but will be obsoleted at one point:
 * Empty sub-domain name (<tt>""</tt>) may be used to configure the domain. Entries specified here have lower precedence.
 
 
-=== Implementation ===
+### Implementation
 
 TODO: Insert implementation notes here.
 
@@ -396,7 +322,7 @@ Non-IP services, such as tor and freenet can be supported by a special resolver 
 
 Similarities between OpenReg and this draft are quite apparent. If we can indeed take a large portion of this well thought out (but not marketed, obviously) system. Some changes would have to be done (replacing timestamps by block count, establishing multi-block translation and exchanges, and either removal of XML to something lighter or doing the enmc to point to EPP data)...
 
-=== Security ===
+### Security
 
 The purpose of Namecoin is to provide a decentralized, yet authoritative database. It is certain that domains defined in the system are authentic and cannot be mangled by an unauthorized entity. (Although there may be caveats about this, they are outside the scope of this document.)
 
@@ -405,12 +331,12 @@ However, it's hard to be certain about the information we get from the external 
 One advantage of running on a locally authoritative system is that a certification authority for public keys isn't needed. ''(see #TODO)''
 
 
-=== Mirror sites ===
+### Mirror sites
 
 A method to make mirroring of sites more manageable is proposed [http://dot-bit.org/forum/viewtopic.php?p=52&sid=9fd1c72effd2a46c2cc67cfc3474c91d#p52 on the forum].
 
 
-=== Encoding ===
+### Encoding
 
 Current encoding for values is UTF&ndash;8 encoded JSON strings, which isn&rsquo;t very space efficient. 
 A binary encoding like BSON wouldn't yield significant [http://bsonspec.org/#/faq space savings], but gzip compression is likely to give good results.
@@ -425,9 +351,9 @@ The magic number that starts a gzip stream cannot start a valid JSON payload, an
 
 ASN.1 would be a nice fit, and if we are dealing with X.509 certs, we already have a parser. Also permits compression. --LittleBrother
 
-=== Future extensions ===
+### Future extensions
 
-==== enmc ====
+#### enmc
 
 ''Regarding [[#Encoding]]''
 
@@ -457,9 +383,9 @@ The EDNS proposed above is quite fat, 569 bytes, but should still allow enough r
 
 * I'm in agreement. However these seem to mostly be NS record DNS based, and if we're branching away from DNS spec, then having alternative methods other then just plain NS->IP to access these records may be wise. I think it's ripe for abuse, and the "p/" trust would definitely have a part to play in if a resolver is interested in following those routes (either for trust or cost of accessing these networks). [[#EPP / OpenReg Prior Work]] may have some solutions, I haven't dug through everything over there yet. -ls
 
-== TODO ==
+## TODO
 
-=== Priority TODO ===
+### Priority TODO
 
 * Specifications of useful DNS records, such as <tt>spf</tt> and <tt>CERT</tt> are currently missing. (Note: <tt>spf</tt> record type will be converted to both <tt>SPF</tt> and <tt>TXT</tt> by DNS bridges.)
 * Research into usefulness of technologies like <tt>NAPTR</tt> and <tt>HIP</tt> is needed before finalizing the specification.
@@ -470,7 +396,7 @@ The EDNS proposed above is quite fat, 569 bytes, but should still allow enough r
 * Protocol/Software changes (within a single chain) should be done by a n% vote, where n > cost of starting an alternative chain (discussed below). It's wild west right now, but steady growth is going to require consensus. I don't care if we disagree on what's better, but I'd like to be able to log into your irc server at a named location to maintain diplomatic relations however corporate or dada they may be. Disconnection from diplomacy can only be assured by Layer 1 desperation (or in the event of war, a whole lot of Layer 0 NO CARRIERS)
 * Make DNS Comic Part II (This should be high priority to garner support, I wish I were kidding) -- Looks like we [[http://i2psupport.org/ have a first drafter]], I like it! More would be great. I understand it completely; as will the I2P crowd, but people with limited literacy skills will not, nor will they take the initiative to understand it.
 
-=== Thoughts on future TODOs ===
+### Thoughts on future TODOs
 Like DNS, this is a 'long haul' project that could out live us if we're successful, after some reflection on what I worked with today, I do want to make sure this is a successful endevour. I would like to formalize the below with some market modeling, and eventually just remove this section, but for now, I mean, so few people read this part that it makes sense to multicast the thoughts here. I really need to learn the WikiMath symbols.  It's kinda hard to explain without the condensed symbols. '''Sorry for the tl;dr factor. These are thoughts that should be simulated before implementation.''' I'll try to throw together a TeX and <!-- What? -->, but first I want to finish the DRFT01->Zone first.
 
 While DNS & BIND is a very 'hardened' beast (I read the BIND10 source this morning, after hating working on it's zone files for decades, now I hate this spec a whole lot more after gaining some respect for BIND while I try to write the ACTUAL transition :P).
