@@ -1,0 +1,36 @@
+This page has not yet been migrated to the [https://github.com/namecoin/namecoin/wiki/Install-and-Configure-Namecoin new wiki] but it may have been partially moved or simply out of date. Instead of editing this page, please take a moment and help move it to the new wiki.
+
+Several methods are available to browse .bit websites:
+
+* Simple [[SystemWideDnsSettings|system-wide DNS settings]] (windows, mac, linux)
+
+* System-wide DNS proxy (windows): https://bitcointalk.org/index.php?topic=205026 (Faster browsing with Acrylic DNS Proxy (cache) & .bit)
+
+* Web proxies, browser proxies, app proxies
+
+* DNS suffixes or servers
+
+* namecoind + nmcontrol + ''Convergence for Namecoin'': http://dot-bit.org/forum/viewtopic.php?f=7&t=1040
+
+* namecoind + script
+
+Choose the one most adapted to your skills :)
+
+= List of App proxies =
+{{:List_Of_App_Proxies}}
+
+= List of DNS servers =
+
+{{:List_Of_DNS_Servers}}
+
+= List of DNS suffixes =
+
+{{:List_Of_DNS_Suffixes}}
+
+= List of Web proxies =
+
+{{:List_Of_Web_Proxies}}
+
+= Advanced installation methods =
+
+* See [[HowToBrowseBitDomainsAdvanced|advanced methods]].
