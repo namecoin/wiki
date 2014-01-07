@@ -68,18 +68,22 @@ Bypassing of DNS-level blocking of known IP addresses or ICANN sites listed in t
 The above suggestion for routing around IP-level censoring does not anonymize the activities of the end-user.  As the blockchain provides a trusted computing base and clients are likely to be rather ephemeral (reducing the time available for connection setup and tear-down) multi-layer onion encryption is rather wasteful.  An overlay network based on [Random Linear Network Coding](http://en.wikipedia.org/wiki/Linear_network_coding) would provide a highly decentralized method of anonymous communication which is resistant to timing analysis.  It would then be easy to mix background traffic (DNS updates, DHT information, and caching common resources such as JavaScript libraries) with the specific content desired by the client .
 
 # Flowchart
-Conceptual overview of each step of the routing process goes here.
+##Loading jsDNS:
+![Flow-chart showing jsDNS loading](http://i.imgur.com/y1aG0Oo.png)
+
+### Technical Note
+At this point the jsDNS servers have no interaction whatsoever with the user or their content.  Even the bootstrapping data is up to the user.
+
+##Loading website:
+![Flow-chart showing how the website is loaded.](http://i.imgur.com/uE1oM7N.png)
+
+### Technical Note: Webworker vs iFrame
+Firefox does not yet support communication from webworkers to any local storage.  That is being fixed now and we may have to use an iFrame in the interim.
 
 ## Technical Note: HTTPS -> HTTP Downgrade
-## Technical Note: Webworker vs iFrame
-## Technical Note: Scaling
-
-# Wireframes
-This is a screen-by-screen mockup of visiting a website using a jsDNS.  Most of the interface is invisible and the exact details of the interface will depend on the backend being used as a DHT, Twitter, Github, and Email all have very different requirements.  This is mostly to elucidate the technical aspects of what happens at each step of the lookup process.
-
-#Legal Analysis
-
+The jsDNS file is loaded from a secure URL and all initial connections MUST be converted to HTTPS (i.e. `http://*.bit.pe` -> `https://*.bit.pe`).  It is fine if the destination website wishes to use HTTP, any security breaches will be unable to poison the database and thus restricted the the destination website (which, presumably, doesn't have anything that needs to be protected via TLS anyway).
 
 # Open Issues
 ## Client-side storage encryption
+It is unclear if and how client-side storage should be encrypted. If malicious software has access to client-side storage than it already has power outside of our security model. It is also possible that the browser vendors could begin blocking malicious publishers as well as monitoring the displayed URL for spoofing attacks and MITM.
 
