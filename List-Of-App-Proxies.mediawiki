@@ -1,0 +1,5 @@
+{|class="wikitable sortable" border="1" cellspacing="0" cellpadding="5" style="border: 1 px solid black; border-collapse: collapse;"
+! IP !! Port !! Location !! Contact !! Dot-BIT !! OpenNIC !! New Nations !! Dot-42
+|-
+| 178.32.31.43 || 8888 || France || [https://bitcoin-contact.org/identity/khal khal] || {{Yes}} || {{No}} || {{No}} || {{No}}
+|}
