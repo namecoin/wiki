@@ -56,7 +56,7 @@ Hanah's parents have taste and do not wish their daughter to catch Bieber Fever,
 
 ## (Potential) Future Goals
 
-###Verification by Child iFrame
+### Verification by Child iFrame
 Verification of the parent page's content by the child iframe is not possible in current browsers. This would, however only require a minor extension to the CORS or Frame SECURITY OPTION to enable either read-only access to the parent window's document or a special extension to retrieve hash signatures of the parent page.
 
 ### Preventing Server-Side MITM Attack
@@ -72,7 +72,7 @@ The above suggestion for routing around IP-level censoring does not anonymize th
 You can get this diagram [here](http://www.lucidchart.com/invitations/accept/52cc957d-75dc-448b-bc69-340e0a0048fc) (However, I really don't like Lucidcharts and plan on converting this diagram to SVG later).
 ![Flow-chart showing jsDNS loading](http://i.imgur.com/y1aG0Oo.png)
 ### Technical Note: Hosting
-At this point the jsDNS servers have no interaction whatsoever with the user or their content.  Even the bootstrapping data is up to the user.
+From this point onward jsDNS servers have no interaction whatsoever with the user or their content.  Even bootstrapping the network is done through the client alone.
 ##Loading website:
 You can get this diagram [here](http://www.lucidchart.com/invitations/accept/52cc9507-b4c4-4e64-8646-0bf20a005b8e)
 ![Flow-chart showing how the website is loaded.](http://i.imgur.com/uE1oM7N.png)
