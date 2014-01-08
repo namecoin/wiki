@@ -77,6 +77,9 @@ At this point the jsDNS servers have no interaction whatsoever with the user or 
 You can get this diagram [here](http://www.lucidchart.com/invitations/accept/52cc9507-b4c4-4e64-8646-0bf20a005b8e)
 ![Flow-chart showing how the website is loaded.](http://i.imgur.com/uE1oM7N.png)
 
+### Technical Note: Per-domain Overrides
+Clients should be able to store webhooks for specific domains, enabling the owner to individualize the source of the DNS information for each client.  All records from private webhooks must be signed by a key present in the domain's original record.  It would be wise to have a the URL for the actual website different from the URL for the private DNS publisher. TODO: finish this, write a user scenario?
+
 ### Technical Note: Webworker vs iFrame
 Firefox does not yet support communication from webworkers to any local storage.  That is being fixed now and we may have to use an iFrame in the interim.
 
