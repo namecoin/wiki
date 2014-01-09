@@ -1,0 +1,87 @@
+= Warning =
+
+This method will not work with DNS redirector / false DNS records. See [[How_To_Configure_Dns_Suffix#Troubleshooting|Troubleshooting]] for more infos.
+
+= Windows =
+
+* Download [http://dot-bit.org/files/suffixes/namecoin.reg this file] (you may need to right click, save as).
+
+* Some browsers change the file extension to ".reg.txt". Should that be the case rename it back to ".reg"
+
+* Double-click the downloaded file (you may need to disable/enable your network connection, or reboot if you don't know).
+
+* Navigate to http://dot-bit.bit
+
+= Mac OS =
+
+* Open 'System Preferences' and click on 'Network'
+
+* Fill the 'Search Domains' field with 'namecoin-suffix.dot-bit.org'
+
+* Apply
+
+* Navigate to http://dot-bit.bit
+
+= Linux GUI =
+
+* Go to the NetworkManager GUI, e.g. from toolbar icon
+
+* Edit Connections -> "Choose your connection here" -> IPv4Settings tab
+
+* Choose "Automatic (DHCP) addresses only" and fill in DNS servers with the one provided by your ISP, and fill 'search domains' with 'namecoin-suffix.dot-bit.org'. You may need to disable/enable the connection once.
+
+* Navigate to http://dot-bit.bit
+
+= POSIX systems (linux, bsd, etc) =
+
+* in '/etc/resolv.conf', replace the line starting with 'search' or add it :
+
+ search namecoin-suffix.dot-bit.org
+
+* Navigate to http://dot-bit.bit
+
+= Iphone =
+
+* Go to 'Settings', Wifi and select your network
+
+* Fill the 'search domains' field with 'namecoin-suffix.dot-bit.org'
+
+* Navigate to http://dot-bit.bit
+
+= Android - not finished yet =
+Android 2.3 seems to redirect unrecognized tlds to a google search so you need to add http:// in front of a .bit domain. Bummer.
+
+There is an app in the store called "set dns" that claims to be able to set the nameserver and also the suffix - did not work for me either.
+
+
+Looks like Android uses a different path /etc/ppp/resolv.conf or does not use resolv.conf at all.
+
+Tried these properties but no luck yet (can be read/set with getprop and setprop from the shell):
+
+net.dns1
+net.dns2
+net.dns.search -> space separated domain search suffixes (used e.g. by VPN)
+
+There are additional dns server properties that may have to be changed. The properties are not persistent over a reboot.
+
+= Additional help =
+
+* Some [[Dot-Bit_Websites|websites to test]]
+
+* [[DNS_Suffix_FAQ|FAQ on DNS suffixes]]
+
+* More infos on [http://dot-bit.org/HowToBrowseBitDomainsAdvanced#Full_support_with_DNS_suffix_resolution DNS suffixes]
+
+* You own a domain name ? Participate and [[How_To_Create_A_Dns_Suffix|share your own suffix]] !
+
+= Troubleshooting =
+
+* Suffix will not work with DNS redirector [a stupid idea]
+
+This will not work if your default DNS server returns false records and ad pages for unresolvable domains.
+
+To know if you are concerned, visit an non existent domain like http://bhtdisnfhx.com.
+
+If your browser says the domain doesn't exist, you are not concerned. (see http://www.grc.com/dns/benchmark.htm for more tests)
+
+To resolve the problem, you need to manually change [[HowToBrowseBitDomains#Replace_your_DNS_server_with_a_compatible_one|your DNS servers]].

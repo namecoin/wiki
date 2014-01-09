@@ -1,0 +1,141 @@
+[[Namecoin]] in the news
+
+==2012-05==
+
+*Title: '''OpenNIC & Dot-Bit (Namecoin) – Domains Not Controlled by ICANN'''
+**Date: May 19th, 2012
+**URL: http://technologyinsanity.com/internet/opennic-dot-bit-namecoin-domains-not-controlled-by-icann/
+**Publication: http://technologyinsanity.com
+**Author: ?
+**Quote: "''With Namecoin, once you register a domain, no one can take it away from you. You own it, plain and simple.''"
+
+
+
+
+*Title: '''Началась регистрация бесплатных доменов .pirate'''
+**Date: 16 May 2012
+**URL: http://www.xakep.ru/post/58702/
+**Publication: http://www.xakep.ru
+**Author: -
+**Quote: "''Несмотря на запрет, в интернете действует десяток альтернативных DNS, в том числе инновационная NameCoin P2P DNS, которая не управляется никакой организацией, а вместо этого копия базы данных хранится у каждого пользователя (узла сети). ''"
+
+
+*Title: '''dot-bit Activity Statistics'''
+**Date: 04 May 2012
+**URL: http://www.bitcoinforum.com/tecnical-analisis-trading-discussion/dot-bit-activity-statistics/msg536/#msg536
+**Publication: bitcoin forum http://www.bitcoinforum.com/
+**Author: dodoking
+**Quote: "''En outre, « pourquoi ne pas avoir abordé du tout certaines solutions alternatives proposées comme Namecoin ou CoDoNS ? Namecoin d’ailleurs propose une solution à l’unicité sans passer par des registres ».''"
+
+==2012-04==
+
+*Title: '''Réactions et débats autour du projet ODDNS '''
+**Date: 13 April 2012
+**URL: http://www.pcinpact.com/news/70206-oddns-bortzmeyer-questions-explications.htm
+**Publication: PC INpact http://www.pcinpact.com/
+**Author: Vincent Hermann
+**Quote: "''En outre, « pourquoi ne pas avoir abordé du tout certaines solutions alternatives proposées comme Namecoin ou CoDoNS ? Namecoin d’ailleurs propose une solution à l’unicité sans passer par des registres ».''"
+
+
+==2012-01==
+
+*Title: '''Bitcoin online currency gets new job in web security'''
+**Date: 17 January 2012
+**URL: http://www.newscientist.com/article/mg21328476.500-bitcoin-online-currency-gets-new-job-in-web-security.html
+**Publication: New Scientist http://www.newscientist.com/
+**Author: Jacob Aron
+**Quote: "''Another system, Namecoin, could be used to circumvent internet censorship. Launched last year, it uses modified Bitcoin software to provide decentralised domain names for websites''"
+
+
+==2011-09==
+
+*Title: '''NameCoin and BitCoin, keys to web anonymity'''
+**Date: 2011-09-01
+**URL: http://www.intelligenceonline.com/corporate-intelligence/terabytes/2011/09/01/namecoin-and-bitcoin-keys-to-web-anonymity,92490555-ART (Paid Access Only)
+**Publication: Intelligence Online, http://www.intelligenceonline.com/ 
+**Author: Intelligence Online
+**Quote: "''NameCoin wants to establish a decentralised system of domain names to thwart censorship efforts.(...)''"
+
+==2011-08==
+
+==2011-07==
+
+*Title: '''Ruxum: Wall Street Level Security Comes To Bitcoin With New Exchange'''
+**Date: 2011-07-18
+**URL: http://techcrunch.com/2011/07/18/ruxum-wall-street-level-security-comes-to-bitcoin-with-new-exchange/
+**Publication: TechCrunch, http://techcrunch.com/
+**Author: Rip Empson, http://techcrunch.com/author/rip-empson/
+**Quote: ''"Namecoin, for those unfamiliar, is a fork of the Bitcoin project, which uses the P2P network to, instead, build a decentralized domain name system that is less vulnerable to downages."''
+
+
+==2011-06==
+
+*Title: '''Bitcoin: censorship-resistant currency and domain name system to the people'''
+**Date:  2011-06-20
+**URL: http://pzwart3.wdka.hro.nl/mediawiki/images/6/64/Barok.bitcoin.pdf
+**Publication: Dissertation, Piet Zwart Institute, Hogeschool Rotterdam
+**Author: Dusan Barok
+**Quote: ''"...  in April 2011, the first version of Namecoin was released (Vinced, 2011). The software uses a new blockchain, separate from the main Bitcoin chain, and introduces a fully functional de-centralised DNS system ... "''
+
+
+*Title: '''The clock is ticking on Bitcoin'''
+**Date:  2011-06-17
+**URL: http://tech.fortune.cnn.com/2011/06/17/the-clock-is-ticking-on-bitcoin/
+**Publication: CNNMoney, http://tech.fortune.cnn.com/
+**Author: Daniel Roberts
+**Quote: ''"Now there are even other Bitcoin-like currencies, such as Namecoins, which are bought with Bitcoins and used to pay for domain name hosting."''
+
+
+*Title: '''Wikileaks endorses Bitcoin and Namecoin'''
+**URL: http://www.tribbleagency.com/?p=8072
+**Date: 2011-06-09
+**Publication: 
+**Author:  
+**Quote: ''"Wikileaks has endorsed Bitcoin and Namecoin about 5 minutes ago via their twitter post."''
+
+
+*Title: '''The Rise of Namecoin'''
+**URL: http://thebitcoinsun.com/post/2011/06/07/The-Rise-of-Namecoin
+**Date: 2011-06-07
+**Publication: The Bitcoin Sun, http://thebitcoinsun.com/
+**Author: Garrett
+**Quote: ''"For only having been in active development for a month and a half, namecoin is showing impressive progress. Much like bitcoin it is a potentially paradigm altering technology, though there is still quite a bit of work to do. According the the dot-bit.org wiki, the namecoin software is still only halfway done, notably missing a GUI. A DNS proxy plugin for browsers and tools to build your own dns servers that resolve .bit domains are what come next, though namecoin.us may help out quite a bit by releasing their code into the public domain."''
+
+==2011-05==
+
+
+*Title: '''Technological Jailbreak: Bitcoin to Namecoin'''
+**Date: 2011-05-28  
+**URL: http://bitcoinweekly.com/articles/technological-jailbreak-bitcoin-to-namecoin
+**Publication: Bitcoin Weekly, http://bitcoinweekly.com/
+**Author: kiba
+**Quote: ''"Whatever the historical evolution will be in the future, Namecoin is, in historical term, an unforeseen innovation that happened within a short span of time of Bitcoin's invention. It is one of the first technological jailbreak for Bitcoin technology, and it is unlikely to be the last."''
+
+
+*Title: '''Namecoin: децентрализирана и защитена DNS, бзирана на P2P'''
+**Date: 2011-05-27
+**URL: http://www.download.bg/index.php?cls=news&mtd=single&id=589173
+**Publication: Download.BG
+**Author:  
+**Quote: (translated): ''"The new DNS-system Namecoin is based on the existing system of the encrypted electronic currency Bitcoin"''
+
+
+*Title: '''eG8 and Internet Control Points'''
+**URL: http://blogs.computerworlduk.com/simon-says/2011/05/decentralising-the-web/index.htm
+**Date: 2011-05-27
+**Publication: Computerworld UK
+**Author: Simon Phipps, http://blogs.computerworlduk.com/authors/#authorId88
+**Quote" ''"This project, based on the distributed online currency system Bitcoin, aims to implement a secure DNS that has no points of control. We need this sort of distributed infrastructure so that the control points simply aren't there to be abused."''
+**Quote: ''"While political action is good to counter this, the practical step of removing the control points is also good. So, welcome NameCoin, I'm keen to give you a try."''
+
+
+==2011-04==
+
+
+*Title: '''[announce] Namecoin - a distributed naming system based on Bitcoin'''
+**Date: 2011-04-18, 02:52:59 
+**URL: http://forum.bitcoin.org/?topic=6017.0
+**Publication: 
+**Author: vinced
+**Quote: ''"Namecoin is a naming system based on bitcoin with a few modifications.  It is inspired by the bitdns discussion and recent failures of the DNS.
+**Quote: ''"Initially, two name spaces are defined - DNS and personal.  The DNS name space is targetted towards a new distributed TLD, possibly .bit."''

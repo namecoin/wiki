@@ -1,0 +1,35 @@
+= '''Work In Progress Page''' =
+
+
+== Current status ==
+
+Namecoin current code is based on bitcoin 0.3.21 (slow, & unsecure)
+
+We need to use the latest bitcoin code and then follow bitcoin commits, or use another library/bitcoin daemon.
+
+
+== Possible solutions ==
+
+=== Use bitcoin ===
+
+Bitcoin 0.8 has added a new index for list of unspent TxOut that does the same thing as the namecoin index for the list of names. So, this new code may be used to manage the name index too.
+
+Here are the differences between namecoin and bitcoin code :
+
+- no p2sh support in namecoin (should be disabled first : don't change several things at the same time)
+
+- another BIP related thing I don't remember is not supported/active on the namecoin network (same remark)
+
+- namecoin accepts merged mined blocks
+
+- specific code to manage namecoin transactions
+
+- add name_* json functions
+
+==== * Rebase on current bitcoin code  ====
+
+Integrate bitcoin commits from 0.3.21 one by one into namecoin
+
+==== * Start from current bitcoin code ====
+
+Due to all the code changes between bitcoin 0.3.21 and the last version, it may be more efficient to start with a fresh bitcoin code and add/recode all specific namecoin code

@@ -1,0 +1,159 @@
+__TOC__
+<big><big><big>'''Namecoin ID : Manage your online identity'''</big></big></big>
+
+==Description==
+
+The purpose of id/ is to manage a public online identity.
+
+* Any application can retrieve data associated with an identity.
+
+* An identity can be composed of email addresses, bitcoin/namecoin/*coin addresses, gpg key, xmpp address, etc.
+
+* Each application type that want to store data associated with an identity must be added in the [[Namespace:Identity#Registered applications|registered applications]] list with a description on how data will be formatted.
+
+==Syntax==
+
+* namespace : id/
+* name :
+
+- max 255 characters,
+
+- lowercase,
+
+- a-z, 0-9
+
+- space : max one space between other characters, not as first or last
+
+- prefixed with "id/"
+
+Regexp (to be confirmed) :
+ ^id/[a-z0-9]([ ]?[a-z0-9])*$
+
+* value : max 1023 characters, json encoded
+
+==Examples==
+
+'''Fecthing all data from the identity of "khal" :'''
+ $ namecoind name_show '''id/khal'''
+ {
+    "email"    : "khal@dot-bit.org",
+    "bitcoin"  : "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4",
+    "namecoin" : "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+ }
+
+'''Fecthing bitcoin data from the identity of "khal" :'''
+ $ namecoind name_jsonget '''id/khal''' bitcoin
+ {
+    "bitcoin"  : "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4",
+ }
+
+==Registered applications==
+
+{|class="wikitable" border="1" cellspacing="0" cellpadding="5" style="border: 1px solid black; border-collapse: collapse;"
+|-
+! Application
+! Description
+! Rules
+! Examples
+|-
+| email
+| associate the id with an email address
+| must contain an email address
+|
+ {
+    "email"    : "khal@dot-bit.org"
+ }
+|-
+| namecoin
+| associate the id with a namecoin address
+| * a namecoin address, or<br />* an array of namecoin addresses, or<br />* an object of namecoin addresses with labels (label "default" is required)
+| 
+<div style="height: 250px; overflow-y: scroll;">
+ $ namecoind name_show id/khal
+ {
+    "namecoin" :
+    {
+      "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+    }
+ }
+
+ $ namecoind name_show id/khal
+ {
+    "namecoin" :
+    {
+      ["N15mJsVMHNtVDedDnD8vu82M5hCfn3nJWq", "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"]
+    }
+ }
+
+ $ namecoind name_show id/khal
+ {
+    "namecoin" :
+    {
+      "default" : "N15mJsVMHNtVDedDnD8vu82M5hCfn3nJWq",
+      "donation": "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+    }
+ }
+</div>
+|}
+
+==Other possible usages==
+
+{|class="wikitable" border="1" cellspacing="0" cellpadding="5" style="border: 1px solid black; border-collapse: collapse;"
+|-
+! Application
+! Description
+! Rules
+! Examples
+|-
+| bitcoin
+| associate the id with a bitcoin address
+| * a bitcoin address, or<br />* an array of bitcoin addresses, or<br />* an object of bitcoin addresses with labels (label "default" is required)
+|
+<div style="height: 250px; overflow-y: scroll;">
+ $ namecoind name_show id/khal
+ {
+    "bitcoin" :
+    {
+      "default" : "1KHAL8bUjnkMRMg9yd2dNrYnJgZGH8Nj6T",
+      "donation": "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4"
+    }
+ }
+
+Allow to securely get a different address for each customer (or anything else, information between brackets will be asked to user) on an untrusted channel (like http), signed with a bitcoin address.
+ $ namecoind name_show id/khal
+ {
+    "bitcoin" :
+    {
+      "default" :
+      {
+        "url" : "http://merchant.com/bitcoin/getnewaddres/{Your customer id}",
+        "signedWith" : "1KHAL8bUjnkMRMg9yd2dNrYnJgZGH8Nj6T",
+        "useOnce": true
+      }
+    }
+ }
+</div>
+|-
+| gpg
+| associate the id with a gpg public key
+| TODO
+| See [[Personal_Namespace]]
+|-
+| xmpp
+| associate the id with an xmpp/jabber id
+| * an xmpp address
+|
+ {
+    "xmpp"    : "jabber@dot-bit.org"
+ }
+|-
+| bitmessage
+| associate the id with a bitmessage address
+| * a bitmessage address
+|
+ {
+    "bitmessage"    : "BM-orkCbppXWSqPpAxnz6jnfTZ2djb5pJKDb"
+ }
+
+
+|}

@@ -1,0 +1,34 @@
+= Namecoin GUI =
+
+== Summary ==
+Register and manage full configuration of your domains (ns forwarding, subdomains, ip, ipv6, alias, etc)
+
+
+= Current projects =
+
+== NamecoinToBind ==
+
+=== Detailed Description ===
+* NamecoinToBind is a php script that generates bind zones for .bit domains from the namecoin blockchain by using the name_scan rpc command.
+
+=== Current status ===
+* Status : working
+* Last updated: 2011-09-19
+* Percentage of completion: 50%
+* Sources : https://github.com/khalahan/NamecoinToBind
+
+=== Owner ===
+* Name: khalahan
+
+=== Limitations ===
+* Supports only initial syntax, not the [[Domain_names|new domain spec]]. Read a little more in the documentation.
+
+=== Scope ===
+* A new (rewritten) version that will support the [[Domain_names|new domain spec]] is on the road but far from finished (better resource management and cache usage). Contact me if you are interested.
+
+=== Dependencies ===
+* A running namecoin accepting rpc commands
+* A bind daemon
+
+=== Documentation ===
+https://github.com/khalahan/NamecoinToBind/blob/master/README

@@ -1,0 +1,36 @@
+==List of domain names specs==
+
+* [[Namespace:Domain names v1.0|Domain names v1.0]] - April 2011
+This is the original domain spec announced by vinced when he released namecoin. It supports ip address, nameserver forwarding and subdomains. 
+
+* '''[[Namespace:Domain names v2.0|Domain names v2.0]] -  Not finalized yet'''
+Stable domain spec built from the draft.
+
+* [[Domain_names|Latest draft]]
+Always in progress draft spec with new ideas.
+
+==Generic informations==
+
+===Namecoin fields===
+
+====Name field====
+
+Name is a lowercase string, which begins with <tt>d/</tt>, followed by the domain name. Namecoin enabled resolvers will append the default TLD (<tt>.bit</tt>) to the name specified here.
+
+ d/example => example.bit
+
+The [http://en.wikipedia.org/wiki/IDNA IDNA] standard encoding is used for internationalized domain names. This means that Unicode names need to be converted to ASCII compatible encoding according to IDNA, before registration. This can be done using the <tt>idn</tt> command-line tool:
+<pre>
+$ idn -p Nameprep ŝtelo
+xn--telo-u5a
+</pre>
+
+Also, only valid domain names are allowed, which means characters other than lowercase letters, numerics and dash are not allowed, as well as names longer than 63 letters and names starting with a dash.
+
+''(Note: However, since this is a measure against compatibility issues with DNS, names consisting of all numeric values and underscore can be discussed.)''
+
+==== Value field ====
+
+Value is an UTF&ndash;8 encoded [http://en.wikipedia.org/wiki/JSON#Data_types.2C_syntax_and_example JSON Object] with a maximum size of 1023 bytes, where all entries are case-sensitive.
+
+Look out to properly escape the value field (or [http://dot-bit.org/tools/domainCheck.php check the syntax here]) when using windows.

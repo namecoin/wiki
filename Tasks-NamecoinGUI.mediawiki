@@ -1,0 +1,92 @@
+= Namecoin GUI =
+
+== Summary ==
+Register and manage full configuration of your domains (ns forwarding, subdomains, ip, ipv6, alias, etc)
+
+
+= Current projects =
+
+== [[Voicedotbit]] ==
+
+=== Detailed Description ===
+* Voicedotbit is a GUI for namecoin. Eventually it will be a voice onion router using namecoin for identity management. 
+
+=== Current status ===
+* Status : alpha
+* Last updated: 2011-08-10
+* Percentage of completion: 50%
+* Sources : https://github.com/teathsch/voicedotbit
+
+=== Owner ===
+* Name: teathsch
+* Email: teathsch@jailcity.com
+
+=== Screenshots ===
+http://jailcity.com/voicedotbit/screenshot.jpg
+
+=== Features ===
+* Register names
+* Update names
+* Send NMC
+* View addresses
+* Manage/update names
+* View transactions
+* View network info
+* Configure namecoind connection
+
+=== Limitations ===
+* No fine domain configuration, only raw registration and update operations are supported
+
+=== How To Test ===
+* [[Voicedotbit#Current_Release|Current release]]
+
+=== Dependencies ===
+* A running namecoin accepting rpc commands
+
+=== Documentation ===
+* [[Voicedotbit]]
+* http://jailcity.com/voicedotbit/
+
+== NamecoinGUI ==
+
+=== Description ===
+NamecoinGUI is a Windows GUI for the namecoin daemon written in C#. It allows you to manage accounts, view transactions, register domains and manage the configuration of them (ns forwarding, subdomains, ip, ipv6, alias, etc). It also allows you to manage your bitcoin wallet as well. Upon startup, the program will ask you for the location of the namecoind executable and will ask you to create a username and password. It also asks for the location of the bitcoind executable, but this can be left blank if you don't intend to use the program to manage your bitcoin wallet.
+
+=== Current status ===
+* Status : alpha
+* Last updated: 2011-10-27
+* Percentage of completion: 90%
+* Version: 0.5.0.18
+* [http://www.mediafire.com/file/5fbp65bh1nxv2ox/NamecoinGUI-0.5.0.18.7z Download]
+* [http://www.mediafire.com/file/m6pd8n1r8f9j617/NamecoinGUI-0.5.0.18-source.7z Source]
+
+=== Owner ===
+* Name: GoldenBoar
+
+=== Screenshot ===
+http://imgur.com/UQw3w
+
+=== Features ===
+* View NMC/BTC network info
+* View NMC/BTC transactions
+* View NMC/BTC detailed transaction information
+* View NMC/BTC accounts and addresses
+* Create new NMC/BTC accounts
+* Create new NMC/BTC addresses
+* Send NMC/BTC
+* Move NMC/BTC between accounts
+* Set transaction confirmation alerts
+* Register names
+* Update names
+* List owned names
+* Renew owned names
+* Scan existing names
+* Backup wallet.
+
+=== Requirements ===
+* Microsoft Windows operating system
+* Microsoft .NET Framework 4
+
+== [[NamecoinJ]] ==
+
+* http://dot-bit.org/forum/viewtopic.php?f=9&t=379

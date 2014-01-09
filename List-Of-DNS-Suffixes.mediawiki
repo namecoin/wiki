@@ -1,0 +1,10 @@
+* Easy and fast configuration and you can directly visit .bit domains.
+
+* See instructions on [[How_To_Configure_Dns_Suffix|how to configure a dns suffix]].
+
+{|class="wikitable sortable" border="1" cellspacing="0" cellpadding="5" style="border: 1 px solid black; border-collapse: collapse;"
+! Suffix !! Location !! Owner
+|-
+| <strike>namecoin-suffix.dot-bit.org</strike> || France || [http://bitcoin-contact.org/identity/khal khal]
+|-
+|}

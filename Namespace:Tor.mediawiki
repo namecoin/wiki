@@ -1,0 +1,41 @@
+__TOC__
+<big><big><big>'''Tor : Manage onion websites'''</big></big></big>
+
+==Description==
+
+The purpose of tor/ is to manage onion websites and have a separate specification from the big domain names specification.
+
+It'll contain an simple onion address in a json format to allow future updates of the specification.
+
+==Syntax==
+
+* namespace : tor/
+* name :
+
+Name is a lowercase string, which begins with <tt>tor/</tt>, followed by the domain name. Namecoin enabled resolvers will append the default TLD (<tt>.tor</tt>) to the name specified here.
+
+; Example
+: <tt>tor/example</tt>
+
+The [http://en.wikipedia.org/wiki/IDNA IDNA] standard encoding is used for internationalized domain names. This means that Unicode names need to be converted to ASCII compatible encoding according to IDNA, before registration. This can be done using the <tt>idn</tt> command-line tool:
+<pre>
+$ idn -p Nameprep ŝtelo
+xn--telo-u5a
+</pre>
+
+Also, only valid domain names are allowed, which means characters other than lowercase letters, numerics and dash are not allowed, as well as names longer than 63 letters and names starting with a dash.
+
+''(Note: However, since this is a measure against compatibility issues with DNS, names consisting of all numeric values and underscore can be discussed.)''
+
+
+==Example==
+
+'''Fecthing tor data from the "khal" record :'''
+ $ namecoind name_show '''tor/khal'''
+ {
+    "onion"    : "dsozuxvbdtqgd.onion",
+ }
+
+==Implementation==
+
+Namecoin resolvers (nmcontrol or nmcsocks) could do a redirect to the .onion address or forward requests to the running tor server on your computer.

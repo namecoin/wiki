@@ -1,0 +1,34 @@
+= How to create my own suffix ? =
+
+* If you control the zone file, add those lines :
+
+ namecoin-suffix		IN NS	ns.namecoin-suffix
+ ns.namecoin-suffix	IN A	178.32.31.43
+
+* If you can only add subdomains on a registrar panel, add those subdomains :
+
+ subdomain : namecoin-suffix
+ type : NS (nameserver)
+ value : ns.namecoin-suffix
+
+ subdomain : ns.namecoin-suffix
+ type : A (ip address)
+ value : 178.32.31.43
+
+Some registrars won't allow you to put NS records. In such a case, it is not possible to create a namecoin suffix.
+
+= How to share my suffix ? =
+
+Add your suffix to the [[List_Of_Suffixes|suffix' list]] or send a mail to "suffix @t dot-bit . org" with :
+
+* the suffix name : namecoin-suffix.your_domain.tld
+
+* a way to contact you : email address or dot-bit forum profile
+
+* optional : country of the suffix
+
+= Do i need to update my suffix ? =
+
+New namecoin servers will be added by the community from time to time and servers can disappear.
+
+So, updating your suffix (each 6 months for example) would help the network to distribute requests among all valid servers.

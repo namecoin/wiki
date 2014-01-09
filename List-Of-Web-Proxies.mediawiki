@@ -1,0 +1,13 @@
+* No configuration, just type the .bit address on the website and voilà !
+
+* Avoid putting login and password on web pages when using a proxy
+
+{|class="wikitable sortable" border="1" cellspacing="0" cellpadding="5" style="border: 1 px solid black; border-collapse: collapse;"
+! URL !! Location !! Contact !! Dot-BIT !! OpenNIC !! New Nations !! Dot-42
+|-
+| <strike>http://www.bitviewer.net</strike> || USA || [http://www.coinconnect.org/profile/cablepair cablepair] || {{Yes}} || {{Partial}} || {{Partial}} || -
+|-
+| http://proxy.dot-bit.org || France || [https://bitcoin-contact.org/identity/khal khal] || {{Yes}} || {{Yes}} || {{Yes}} || {{Yes}}
+|-
+| http://dotbit.me || Germany || [http://dotbit.me?tab=contact Tagide] || {{Yes}} || {{No}} || {{No}} || {{No}}
+|}

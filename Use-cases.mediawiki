@@ -1,0 +1,19 @@
+'''Possible Namecoin use cases'''
+
+[[Domain names]] - can be shortcuts to regular domains<br>
+[[Personal Namespace]]<br>
+[[Messaging System]]<br>
+[[Namespace:Aliases|Alias system]] / [[Namespace:Identity|Identity System]] in bitcoin, alt-coins, bitmessage, etc<br>
+<br>
+Login system  (See [http://p2pconnects.us/2013/05/10/namecoin-cryptographic-login-that-doesnt-suck/] for example)<br>
+Notary/Timestamp system (See [http://news.techworld.com/security/3449015/could-the-bitcoin-network-be-used-as-an-ultrasecure-notary-service/])<br>
+Web of trust (like http://bitcoin-otc.com/trust.php and more)<br>
+Unified Bitcoin Payment Address System<br>
+Bonds<br>
+Shares<br>
+Voting<br>
+Torrent tracker via magnet links (See [https://bitcointalk.org/index.php?topic=127980.0| discussion in the bitcointalk forum])<br>
+Public file signatures [https://bitcointalk.org/index.php?topic=210876|bitcointalk]
+<br>
+
+[http://dot-bit.org/forum/viewtopic.php?p=2618#p2618 Forum thread]<br>

@@ -1,0 +1,53 @@
+== Namespaces ==
+
+{| class="wikitable sortable" style="width: auto; text-align: center; table-layout: fixed; border-collapse: collapse;" border="1"
+!Application
+!Title
+!Status
+!Namespace
+|- style="background-color: #cfffcf"
+| [[Namespace:Domain_names|Domain Names]]
+| .bit TLD
+| Active
+| d
+|-
+| [[Namespace:Domain_names_v2.0#Importing_and_delegation|Domain Names]]
+| non-resolvable Domain data
+| Draf
+| dd or s
+|-
+| [[Messaging System]]
+| Send messages between namecoin users
+| Draft
+| m
+|-
+| [[Personal Namespace]]
+| GPG, SSL, identities, etc 
+| Draft
+| p
+|-
+| [[Namespace:Aliases|Alias System]]
+| To map a name to a bitcoin/namecoin/else address 
+| Draft
+| a
+|-
+| [[Namespace:Identity|Identity System]]
+| Manage a public online identity (bitcoin/namecoin/email/etc)
+| Draft
+| id
+|-
+| [[Namespace:Tor|Tor]]
+| .tor TLD for onion websites
+| Draft
+| tor
+|-
+| [[Namespace:I2P|I2P]]
+| .i2p TLD for I2P websites
+| Draft
+| -
+|- style="background-color: #ffcfcf"
+| Unused
+| -
+| Withdrawn
+| -
+|}

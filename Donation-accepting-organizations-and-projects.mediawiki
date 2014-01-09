@@ -1,0 +1,18 @@
+<div class="plainlinks">
+Here is a list of organizations that accept Namecoin donations. Only notable donation-accepting sites should be added here. 
+
+{| class="wikitable" border="1" cellpadding="5" style="border: 1 px solid black; border-collapse: collapse;"
+|-
+! Organization
+! Purpose
+! Donation Page
+|-
+|[http://dot-bit.org/Main_Page Namecoin Project]
+|A distributed naming system based on Bitcoin. Donations will be spread among people who help the project
+|[[Dot-BIT_Namecoin_Project:Site_support]]
+|-
+|[http://www.rejuvepedia.org/index.php?title=Main_Page Rejuvepedia]
+|Open source encyclopedia on human rejuvenation
+|http://www.rejuvepedia.org/index.php?title=Donations
+|-
+|}

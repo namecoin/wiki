@@ -1,0 +1,16 @@
+{|class="wikitable sortable" border="1" cellspacing="0" cellpadding="5" style="border: 1 px solid black; border-collapse: collapse;"
+! Software || Language || <b style="cursor: pointer; text-decoration: underline" title="Active: namecoin is queried each request / Passive: all zone files are generated once. Suitable for high load and fast replies.">Mode</b> || <b style="cursor: pointer; text-decoration: underline" title="Listen on port 53 like a standard DNS server or act as a proxy for softwares ?">Type</b> || <b style="cursor: pointer; text-decoration: underline">[[Namespace:Domain_names|Support]]</b> || Comments
+|-
+| [https://dot-bit.org/forum/viewtopic.php?f=9&t=315 NamecoinToBind] || php || passive || dns || [[Namespace:Domain_names_v2.0|Spec v2.0]] || PHP script to generate .bit zones for bind. Suitable for high load and fast replies.
+|-
+| [https://dot-bit.org/forum/viewtopic.php?f=9&t=219 nmcsocks] || nodejs || active || proxy + dns || [[Namespace:Domain_names_v2.0|Spec v2.0]]
+|-
+| [https://github.com/namecoin/namecoin/tree/master/client ncproxy] || python || active || proxy || [[Namespace:Domain_names_v1.0|Spec v1.0]]
+|-
+| [https://dot-bit.org/forum/viewtopic.php?f=9&t=345 pdns backend] || python || active || dns || [[Namespace:Domain_names_v1.0|Spec v1.0]]
+|-
+| [https://github.com/sonicrules1234/Namecoin-DNS-Server Namecoin-DNS-Server] || python || active || dns || [[Namespace:Domain_names_v1.0|Spec v1.0]]  || Dependencies http://json-rpc.org/wiki/python-json-rpc and https://bitbucket.org/jaraco/pydns
+|-
+| [https://github.com/tkooda/namecoin-tinydns-data Namecoin-TinyDNS-Data] || python || passive || dns || [[Namespace:Domain_names_v2.0|Spec v2.0]] || Python script to generate .bit zones for TinyDNS / DJBDNS. Suitable for high load and fast replies.
+|-
+|}

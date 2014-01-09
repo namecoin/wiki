@@ -1,0 +1,40 @@
+== Bounty: Namecoin Web User Interface (WUI) ==
+
+
+== Requirements: General ==
+
+* Open Source License
+* Simple to setup and run, no external dependencies
+* Works with any modern web browser, cross platform
+
+== Requirements: Functionality ==
+
+* basic *coin management: (getinfo, listtransactions, sendtoaddress, etc)
+* namecoin name browsing: (name_list, name_scan)
+* namecoin d/ (.bit) browsing: based on current [[Domain names]] Draft Specification
+* namecoin name management: (name_new, name_firstupdate, name_update)
+
+== Prototype system ==
+
+'''namecoind + web browser + external html/javascript file.'''
+
+* no changes to namecoind required
+* works via standard web browser
+* via javascript calls into namecoind RPC port
+
+== Final system ==
+
+'''namecoind + web browser.'''
+
+* Patch for namecoind to support internal WUI
+* all functionality integrated into namecoind
+** new options/commands for WUI configuration
+** all html/javascript served by namecoind, with no external files required
+
+== More info ==
+
+* [http://dot-bit.org/forum/viewtopic.php?f=9&t=235 forum post]
+
+* [http://easyxdm.net/wp/ easyxdm javascript library for Cross-domain Messaging]
+* [https://github.com/oyvindkinsey/easyXDM#readme easyXDM readme]
+* [https://github.com/oyvindkinsey/JsApiToolkit#readme JsApiToolkit readme]

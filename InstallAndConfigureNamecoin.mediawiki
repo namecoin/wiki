@@ -1,0 +1,84 @@
+==Quick start on Linux==
+This is a quick way to get namecoind running on your Linux machine.
+
+Download & extract the archive and create initial configuration files by executing namecoind:
+ wget -O /tmp/namecoin.tgz http://dot-bit.org/files/namecoin_linux`getconf LONG_BIT`.tgz
+ tar xfz /tmp/namecoin.tgz -C ~
+ ~/namecoind
+
+Fill in the configuration and finally start namecoind:
+ NMCPASS=`openssl rand -base64 15` printf "rpcuser="$USER"\nrpcpassword="$NMCPASS >> ~/.namecoin/namecoin.conf
+ ~/namecoind
+Now have a look at the section ''Important commands'' on the end of this page.
+
+== Download ==
+'''[http://dot-bit.org Download namecoin]''' from the homepage and extract the archive.
+== Configuration ==
+Start namecoind to create the config folder:
+{| class="wikitable" style="width:80%;" border="1" cellpadding="5" cellspacing="0"
+!colspan="6"|Executing namecoind
+|-
+! Windows
+! Linux
+|-
+| Open a [http://windows.microsoft.com/en-us/windows-8/where-is-command-prompt command prompt], switch to the directory of the extracted file and type<br /><code>namecoind</code>
+| Open a [https://help.ubuntu.com/community/UsingTheTerminal#Starting_a_Terminal terminal] (Ctrl+Alt+T in many desktop environments), switch to the directory of the extracted file and type<br /><code>./namecoind</code>
+|}
+
+It will tell you where to create the "namecoin.conf" file
+ Warning: To use namecoind, you must set rpcpassword=<password>
+ in the configuration file: /home/user/.namecoin/namecoin.conf
+ If the file does not exist, create it with owner-readable-only file permissions.
+
+{| class="wikitable" border="1"
+!colspan="6"|Configuration file location
+|-
+! Windows
+! Linux
+|-
+| %APPDATA%\namecoin
+| ~/.namecoin
+|}
+
+Populate a file "namecoin.conf" with at least these lines:
+
+ rpcuser=your_user
+ rpcpassword=your_pass
+ rpcport=8336
+ daemon=1
+
+Replace ''your_user'' and ''your_pass'' with any values of your choosing.
+
+Also add this line if you want to solo mine:
+
+ server=1
+
+
+Now start namecoind again and you will get back to the command prompt. Namecoin runs in the background and will fetch the blockchain (which can take several hours).
+
+To check on the progress of the download, try the ''namecoin getinfo'' command from the table below.
+
+== Important commands ==
+{| style="background:#cccc99;color:black;width:80%;" border="1" cellpadding="5" cellspacing="0" align="center"
+|-
+! Command
+! Description
+|- style="background:white; color:black"
+| <code>namecoind</code>
+| Start Namecoin daemon
+|- style="background:white; color:black"
+| <code>namecoind help</code>
+| Show all available commands
+|- style="background:white; color:black"
+| <code>namecoind getinfo</code>
+| Show various information. blocks value should match the current block count ([http://explorer.dot-bit.org/stats/block_count.txt <include src="http://explorer.dot-bit.org/stats/block_count.txt" nopre />])
+|- style="background:white; color:black"
+| <code>namecoind listreceivedbyaddress 0 true</code>
+| List your Namecoin address on which you can receive Namecoins
+|- style="background:white; color:black"
+| <code>namecoind getnewaddress</code>
+| Create a new Namecoin address
+|- style="background:white; color:black"
+| <code>namecoind name_new d/foobar</code>
+| Reserve a domain name. See [[HowToRegisterAndConfigureBitDomains|this page]] for detailed instructions on how to register a domain.
+|}

@@ -1,0 +1,29 @@
+Client API calls specific to namecoin (not part of the Bitcoin Client:
+[https://en.bitcoin.it/wiki/Original_Bitcoin_client/API_calls_list])
+
+
+Use "namecoind help [command]" to get help for a specific command in the shell.
+
+
+{|class="wikitable" cellpadding="3" style="text-align:left;"
+!Command    !!Parameters &nbsp;&nbsp;&nbsp;&nbsp;        !!Description
+|-
+|name_clean || - || Remove firstupdates that cannot be satisfied and their dependents; Clean unsatisfiable transactions from the wallet - including name_update on an already taken name.
+|-
+|name_debug|| - || Dump pending transactions id in the debug file.
+|-
+|name_debug1 || <name> || Dump name blocks number and transactions id in the debug file.
+|-
+|name_firstupdate || <name> <rand> [<tx>] <value> || register a domain (only possible 12 blocks after a name_new)
+makes it public; name_update needed after 36000 blocks (~~250 days) to renew the domain; cost: 0.01NMC network fee plus standard tx fee
+|-
+|name_history ||<name>|| List all name values of a name.
+|-
+|name_list||  [<name>] || List names in wallet.
+|-
+|name_new ||<name>||pre-order a domain (you do not own the domain yet); takes 12 blocks to mature; cost: 0.01NMC network fee plus standard tx fee
+|-
+|name_scan || [<start-name>] [<max-returned>] || scan all names, starting at start-name and returning a maximum number of entries (default 500)
+|-
+|name_update || <name> <value> [<toaddress>] || update, transfer or renew domain; necessary every 36000 blocks (~~250 days); cost: standard tx fee
+|}

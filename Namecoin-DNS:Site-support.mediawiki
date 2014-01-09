@@ -1,0 +1,37 @@
+== Donate to dot-bit project ==
+
+Bitcoin : 1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4 [http://blockexplorer.com/address/1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4 (balance)]
+
+Namecoin : N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9 [http://explorer.dot-bit.org/a/N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9 (balance)]
+
+
+Project donations will be spread among people who help the project. Here are several possibilities :
+
+* New DNS servers that support .bit domains
+
+* Namecoin/Software bounty (tor proxy to hidden service, etc)
+
+== Signed addresses ==
+ -----BEGIN PGP SIGNED MESSAGE-----
+ Hash: SHA1
+ 
+ Bitcoin : 1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4
+ Namecoin : N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9
+ 
+ -----BEGIN PGP SIGNATURE-----
+ Version: GnuPG v1.4.11 (GNU/Linux)
+ 
+ iQIcBAEBAgAGBQJN8ppwAAoJEJzFuS6WXWmpxqEQAMR48VZt8dAC55V3E8v8APlq
+ 6SYPqiUbI4eu3957pzYVi8UbOAs4hwGBMhw9rqUGrMMt6+w6F+e9AsGKo+QcHYLn
+ O5cFsWdxigAzyRgMrX/zY8GF5d7/BSmvE9jvHtvZRm7fuo2kgtfjv1cgCM/UQq/g
+ ZpWsoIL+/5etMSdmtI5Ia5QaThUMXlD+Xfp9IWZbokvV02sEJWbODe6MvIGD3Jcj
+ ti7bEM8cttA/l0DcXDHLRQlIlfY4MxJwZae4jd9h5QnV1uHpqYGsiT+LrQzJfhum
+ sZBXmIyMN5i2+Vk7rnY+AL9UxQPQtEXZjhCzv2tGHT6RDUl9nawAldC3yPuWWVpI
+ Q5BzlK+LfM4ShQ/Vkcfyy/8Nruy7GRSy/bjJ7RWrpsE4MqtTOLwV6wrrGu8UaJLB
+ 3wtULl9si0bIHUfKRJTSLJky3ngHMH4/HsC240OV1vx/sFzO0HNbPmW3WOPB3apd
+ puYN4Yq+ROZ2CqAz4U8LZvOdurtkexamnqulmkBo+aYh9rcJhQ9wYpQrNAyiR9ia
+ qh9SUwIjIsJZC+L/BFs0NL1fqlkNRXQqoT7+P3RB3R1BoxOgS72mlUJeb2J7XLY4
+ DpSsP0sGPVJu0dzdYII5UbHIKTwCuT4mCZiDBocNGsJJYOJI2iodHiu1m8bMCQl6
+ LpRNgg+nasAyEGjGo1sz
+ =Ecd3
+ -----END PGP SIGNATURE-----

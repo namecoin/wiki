@@ -1,0 +1,140 @@
+'''!! DRAFT !!'''
+
+== Aims ==
+
+* Fast and secure way to get informations from an alias
+* Can be used to store bitcoin addresses, email addresses, xmp, gpg, etc
+* Associate a set of different addresses with an alias.
+
+== Use case with a bitcoin client ==
+
+Bitcoin Aliases are pointers to Bitcoin addresses.
+Instead of pasting a bitcoin address in the client, 
+users may type their alias.
+
+Aliases may be stored on a server. The problem with that is that you
+need to trust the server with the task of giving your alias.  Someone
+who takes the control of the server can hijack your alias.
+
+Also, most people do not want the hassle of managing a server.
+
+A solution to that problem is to store aliases in the Namecoin
+blockchain. An alias stored with this method cannot be forged.
+(some clients might access the namecoin blockchain using a server,
+but that remains their choice; it is not imposed on others)
+
+To avoid managing a namecoin wallets, it is possible to share the same
+private key between a bitcoin address and the namecoin address used to
+register the alias.
+
+see: 
+* https://en.bitcoin.it/wiki/BIP_0015
+* http://ecdsa.org/bitcoin_URIs.html (the section on aliases)
+* http://ecdsa.org/bitcoin-alias/
+
+
+== Possible namespaces ==
+
+* a/
+* alias/
+* id/
+* email/
+* p/
+
+== Name ==
+
+An alias prefixed with the namespace.
+
+* Uppercase allowed / not allowed ?
+* email address allowed / not allowed ?
+
+
+; Examples
+: <tt>a/example</tt>
+: <tt>a/example2@example.com</tt>
+
+
+== Value ==
+
+=== Example ===
+<dl>
+<dd><pre>
+$ namecoind name_show a/khal6987
+{
+    "email"    : "khal@dot-bit.org",
+    "bitcoin"  : "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4",
+    "namecoin" :
+    {
+      "Donation address": "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9",
+      "Generic address" : "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+    }
+    "gpg"      :
+    {
+        "fpr"  : "0123456789abcde0123456789abcde0123456789",
+        "uri"  : ["http://domainA/user.key", "http://domainB/user.key"],
+    }
+}
+</pre>
+</dl>
+
+=== Fields ===
+
+{| cellspacing="0" cellpadding="8" border="1" style="border: 1px solid black; border-collapse: collapse;"
+!  align="left" | Type
+!  align="left" | Description
+!  align="left" | Example
+|-
+|  align="left" | <tt>nick</tt>
+|  align="left" | A nickname
+|  align="left" |
+ "nick" : "my_usual_nick_name"
+|-
+|  align="left" | <tt>email</tt>
+|  align="left" | An email address
+|  align="left" |
+ "email" : "khal@dot-bit.org"
+|-
+|  align="left" | <tt>xmpp</tt>
+|  align="left" | A jabber/xmpp id
+|  align="left" |
+ "xmpp" : "noreply@dot-bit.org"
+|-
+|  align="left" | <tt>bitcoin</tt>
+|  align="left" | A bitcoin address,<br /> array of addresses<br /> or object of addresses
+|  align="left" |
+ "bitcoin" : "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4"
+
+ "bitcoin" : ["1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4", "1J3EKMfboca3SESWGrQKESsG1MA9yK6vN4"]
+|-
+|  align="left" | <tt>namecoin</tt>
+|  align="left" | A namecoin address,<br /> array of addresses<br /> or object of addresses
+|  align="left" |
+ "namecoin" : "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+
+ "namecoin" :
+ {
+   "Donation address": "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9",
+   "Generic address" : "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9"
+ }
+|-
+|  align="left" | <tt>gpg</tt>
+|  align="left" | OpenGPG fingerprint and URIs of the key,<br /> or ASCII armored public key
+|  align="left" |
+ {
+   "fpr" : "N2pGWAh65TWpWmEFrFssRQkQubbczJSKi9",
+   "uri" : ["http://a.key", "http://b.key"]
+ }
+
+ {
+  "pgpk": "mQINBE2xbR8BEADT3HRuWJ9dzIhetmMgPRYD4Yv4Bb17/bMgdAV0HPUa+6X4xwUjPjEGSfvSIPUAKo0DCsJrzKhysgSj+Pr8lingPb..."
+ }
+|-
+|}
+
+== Notes ==
+
+* '''ASCII armored public key :'''
+
+Namecoin records don't allow more than 1023 characters, so storing "pgpk" in the blockchain might not be possible for all keys.
+
+Increasing the allowed size of a record would solve this.

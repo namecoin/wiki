@@ -1,0 +1,31 @@
+=Namespace "d/", used for .bit domain names=
+
+v1.0 is the original domain spec announced by vinced when he released namecoin. To find other versions, go to [[Namespace:Domain_names|Domain names specs]].
+
+It supports ip address, nameservers forwarding and subdomains. Several nameservers can be used with "[" and "]".
+
+Here is the syntax of the value parameter :
+
+==Map a domain name to an ip address==
+ {"map":{"":"78.142.148.62"}}
+ {"map":{"":"1.2.3.4","www":"1.2.3.5"}}
+
+Examples :
+ Linux: ./namecoind name_update d/yourname '{"map":{"":"78.142.148.62"}}'
+ Windows: namecoind.exe name_update d/yourname "{\"map\":{\"\":\"78.142.148.62\"}}"
+
+==Forward DNS requests to an authoritative DNS server (using ip or hostname)==
+ {"map": {"": {"ns": ["ns1.example.com", "ns2.example.com"]}}}
+ {"map": {"": {"ns": ["1.1.1.1", "1.1.1.2"]}}}
+
+Examples :
+ Linux: ./namecoind name_update d/yourname '{"map": {"": {"ns": ["ns1.example.com", "ns2.example.com"]}}}'
+ Windows: namecoind.exe name_update d/yourname "{\"map\": {\"\": {\"ns\": [\"ns1.example.com\", \"ns2.example.com\"]}}}"
+
+==Map a domain name to another domain==
+Note : only supported by a proxy software, and not by DNS servers.
+
+Examples :
+ Linux : ./namecoind name_update d/yourname '{"map": {"": {"translate": "bitcoin.org", "ns": ["ns1.example.com", "ns2.example.com"]}}}'
+ Windows: namecoind.exe name_update d/yourname "{\"map\": {\"\": {\"translate\": \"bitcoin.org\", \"ns\": ["ns1.example.com\", \"ns2.example.com\"]}}}"
+ => foo.yourname.bit will be translated to foo.bitcoin.org before it is sent to your DNS servers.

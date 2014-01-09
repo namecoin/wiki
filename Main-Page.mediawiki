@@ -1,0 +1,206 @@
+__NOTOC__
+<div class="plainlinks">
+{| id="mp-topbanner" style="width:100%; background:#f6f6f6; margin-top:1.2em; border:1px solid #ddd;"
+| style="width:61%; color:#000;" |
+<!--        "WELCOME TO DOT-BIT" AND ARTICLE COUNT        -->
+{| style="width:100%; border:none; background:none;"
+| style="text-align:center; white-space:nowrap; color:#000;" |
+<div style="font-size:162%; border:none; margin:0; padding:.1em; color:#000;">Welcome to the Dot-BIT project.</div>
+<div style="top:+0.2em; font-size:95%;">A decentralized, open DNS system based on the bitcoin technology.</div>
+<div id="articlecount" style="width:100%; text-align:center; font-size:85%;">[[Special:Statistics|{{NUMBEROFARTICLES}}]] [[Special:Allpages|articles]].</div>
+|}
+<!--        PORTAL LIST ON RIGHT-HAND SIDE        -->
+| style="width:13%; font-size:120%;" |
+* <span class="plainlinks">[http://dot-bit.org/About About]</span>
+| style="width:13%; font-size:120%;" |
+* <span class="plainlinks">[http://dot-bit.org/FAQ FAQ]</span>
+| style="width:13%; font-size:120%;" |
+* <span class="plainlinks">[http://dot-bit.org/forum/index.php Forum]</span>
+| style="width:13%; font-size:120%;" |
+* <span class="plainlinks">[http://dot-bit.org/IRC_Channels IRC]</span>
+| style="width:13%; font-size:120%; padding-left: 35px;" |
+* <span class="plainlinks">[http://dot-bit.org/tools/ Tools]</span>
+| style="width:13%; font-size:120%; padding-left: 35px; padding-right: 40px;" |
+* <span class="plainlinks">[http://dot-bit.org/Trade Trade]</span>
+|}
+
+<div style="float:left; max-width: 500px;">
+
+
+<big>'''What is Namecoin'''</big>
+
+[[Namecoin]] is a peer-to-peer '''generic''' name/value datastore system based on [http://www.bitcoin.org/ Bitcoin] technology (a decentralized cryptocurrency).
+It allows you to:
+* Securely register and transfer arbitrary names, '''no possible censorship!'''
+* Attach values to the names (up to 1023 bytes)
+* Trade and transact namecoins, the digital currency '''NMC'''.
+
+There are plenty of possible [[use cases]]. Read more about [[Namecoin]].
+
+
+<big>'''What is Dot-BIT'''</big>
+
+Dot-BIT, the first project using namecoin, is building a domain name system ('''DNS''') using the '''.bit TLD'''.
+Our goal is to spread .bit domains by providing resources and tools to the community, from developers to end users.
+
+
+<big>'''Project News'''</big>
+<div style="height: 300px; overflow-y: scroll;">
+* August 19, 2013 - New Netherlands, EU [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://www.dikkenberg.net/contact Bas van den Dikkenberg] : 81.169.248.220 *Donations Welcome
+* August 18, 2013 - New Buffalo, NY, USA [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://mrcaseyjames.com/?page_id=265 MrCaseyJames.com] : 192.3.27.117 *Donations Welcome
+* August 9, 2013 - New Netherlands, EU [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://mrcaseyjames.com/?page_id=265 MrCaseyJames.com] : 176.56.238.160 *Donations Welcome
+* July 26, 2013 - New [[HowToRegisterAndConfigureBitDomains#Register_a_domain_with_a_registrar|Registrar]] : https://domaincoin.net
+* July 25, 2013 - New Dallas, TX, USA [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://mrcaseyjames.com/?page_id=265 MrCaseyJames.com] : 64.31.48.60 *Donations Welcome
+* July 24, 2013 - MrCaseyJames BindCoin Forwarder launched to simplify install process of creating a [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] - [http://mrcaseyjames.com/?page_id=261 Project Page]
+* July 24, 2013 - New Seattle, WA, USA [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://mrcaseyjames.com/?page_id=265 MrCaseyJames.com] : 192.184.89.74 *Donations Welcome
+* July 23, 2013 - MrCaseyJames BindCoin Installer launched to simplify install process of creating a [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] - [http://mrcaseyjames.com/?page_id=251 Project Page]
+* July 21, 2013 - Security focused Australian [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] run by [https://cloudns.com.au/ cloudns.com.au] : 113.20.6.2 *Connection Requires DNSCrypt*
+* July 16, 2013 - New Atl, GA, USA [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] with permanent hosting by [http://mrcaseyjames.com/?page_id=265 MrCaseyJames.com] : 192.249.59.89 *Donations Welcome
+* May 2, 2013 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] AWS permanent hosting by [http://jaysee.net jaysee.net] : 54.235.73.82
+* April 5, 2013 - exchange.bitparking.com shutting down.[http://exchange.bitparking.com/]
+* November 3, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by bitmaster: 95.211.195.245 / 2001:1af8:4020:a037:1::1000
+* Sep 25, 2012 - [http://dot-bit.org/forum/viewtopic.php?p=3051#p3051 Namecoin v3.50 win32] : New Windows build released
+* Sep 9, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by DnsGuy : 176.58.118.172
+* Sep 5, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by DnsGuy : 106.187.47.17
+* July 28, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by Inductive Soul : 69.194.226.23
+* June 12, 2012 - New twitter account for [https://twitter.com/#!/NamecoinDotInfo Namecoin]
+* June 8, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by Jamyn : 108.174.61.249
+* May 27, 2012 - [http://dot-bit.org/forum/viewtopic.php?f=2&t=501 NamecoinToBind v3.0]
+* May 26, 2012 - [http://dot-bit.org/forum/viewtopic.php?f=8&t=500 Namecoin v3.50] : faster & better
+* March 26, 2012 - We passed 55000 domains!
+* March 18, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by zib : 194.71.109.237 
+* January 26, 2012 - New [[HowToBrowseBitDomains#List_of_DNS_servers|DNS server]] by chmod755 : 216.231.140.69
+* January 25, 2012 - Release 0.3.24.66 : fix [https://dot-bit.org/forum/viewtopic.php?f=2&t=455 dust spam]
+* December 27, 2011 - The dotBit project reached 10000 domain names !
+* December 20, 2011 - Java based GUI for Namecoin called [http://sourceforge.net/projects/namecoinj/ NamecoinJ] released!
+* December 07, 2011 - First [http://gee.bit/ search engine] for dotBIT domains !
+* November 19, 2011 - More than 5000 domains registered !
+* November 17, 2011 - New [[HowToGetNamecoins#Namecoin_Faucets|namecoin faucet]] : [http://faucet.yepcorp.com/ faucet.yepcorp.com]
+* November 09, 2011 - 4000 valid domains names reached !
+* November 08, 2011 - [https://plus.google.com/u/0/107506677513657103798/posts Google+ Namecoin page]
+* November 07, 2011 - [http://dot-bit.org/forum/viewtopic.php?f=9&t=349 Namecoin Bundle] : namecoin + proxy for firefox, IE & chrome
+* October 25, 2011 - 3000 valid domains names reached !
+* October 19, 2011 - [https://github.com/khalahan/NamecoinToBind NamecoinToBind v2.0] : added new spec support
+* October 17, 2011 - <span style="color: red;">Security release</span>, upgrade to 0.3.24.64.
+* October 8, 2011 09:40:29 UTC - [[Merged Mining]] now active.
+* September 26, 2011 - Official namecoin tree created on github[https://github.com/namecoin/namecoin]
+* September 19, 2011 - Release of the [https://github.com/khalahan/NamecoinToBind NamecoinToBind] php script
+* September 18, 2011 - Version 0.3.24.63 released[https://github.com/vinced/namecoin/tree/nc0.3.24.63] for testing.  This version includes a fix for the time warp/zeitgeist attack[http://dot-bit.org/forum/viewtopic.php?p=2022#p2022]
+* September 15, 2011 - Threatened 51% attack called off.  Work continues on client upgrades.  Merged mining still on for block 19200.  Bug fix for time warp/zeitgeist[http://bitcoin.stackexchange.com/questions/1055/what-is-the-zeitgeist-attack-does-it-affect-all-blockchain-technologies][https://bitcointalk.org/index.php?topic=43692.msg521772#msg521772] attacks is in discussion.
+* September 14, 2011 - Updated client software is currently being prepared (with blockchain lockins).  Expect to upgrade your clients in the near future, possibly multiple times.  Latest development version is 3.24.62[https://github.com/vinced/namecoin/].  Stay tuned for more info.
+* September 11, 2011 - A miner has threatened a 51% attack on the namecoin blockchain, claiming the attack will begin at block 19101.[http://dot-bit.org/forum/viewtopic.php?f=2&t=292][https://bitcointalk.org/index.php?topic=43465.0][https://bitcointalk.org/index.php?action=profile;u=29445;sa=showPosts]  
+* September 2011 - [[Merged Mining]] to start at block 19200.[http://dot-bit.org/forum/viewtopic.php?f=5&t=217]  Please plan to upgrade your clients before then.  '''This is a mandatory upgrade as the validation rules have changed!'''
+* August 2011 -  MasterPool.eu[https://www.masterpool.eu/merged] is first pool to announce adoption of Merged Mining.  Trials on testnet running.[https://alpha.masterpool.eu/]
+* Jul 15, 2011 - [[Merged Mining]] between Namecoin and Bitcoin proposed
+* Jul 4, 2011 - 2000 domains reserved
+* Jun 7, 2011 - 1500 domains reserved
+* May 28, 2011 - [http://dot-bit.org/tools/domainCost.php Domain cost calculator] available
+* May 18, 2011 - 500 domains reserved
+* May 4, 2011 - First version of this wiki, [https://bitcointalk.org/index.php?topic=6017.msg105545#msg105545 new release of namecoin]
+* April 29, 2011 - [http://namecoin.bitcoin-contact.org/ First .bit DNS server]
+* April 23, 2011 - First tweet [http://twitter.com/namecoin @namecoin] (by community member [[User:sgornick|Sgornick]])
+* April 18, 2011 - [https://bitcointalk.org/index.php?topic=6017.0 First version of namecoin]
+</div>
+
+<big>'''Project Status'''</big>
+
+* Status : usable, beta
+
+* Number of public [[HowToBrowseBitDomains#List_of_DNS_servers|DNS servers]] : 11
+* Number of domains : [http://dns.dot-bit.org/stats/domain_count.txt <include src="http://dns.dot-bit.org/stats/domain_count.txt" nopre />]
+
+* Current block : [http://explorer.dot-bit.org/stats/block_count.txt <include src="http://explorer.dot-bit.org/stats/block_count.txt" nopre />]
+</div>
+
+
+<div style="float:right; max-width: 300px; margin: -20px 10px 0 20px;">
+
+== Getting started ==
+
+* [[How To Browse Bit Domains|How to browse .bit domains]]
+
+* [[HowToRegisterAndConfigureBitDomains|How to register and configure .bit domains]]
+
+* [[HowToGetNamecoins|How to get namecoins, NMC]]
+
+
+* [[Websites|List of .bit enabled websites]]
+
+
+* [[InstallAndConfigureNamecoin|Install and configure Namecoin]]
+
+* [[Client_API_calls_list|Client API calls list]]
+
+ 
+
+== Download ==
+
+Version 3.50.00 :
+
+* [http://dot-bit.org/files/namecoin_linux32.tgz Linux 32bits] by [[User:Khal|Khal]]
+
+* [http://dot-bit.org/files/namecoin_linux64.tgz Linux 64bits] by [[User:Khal|Khal]]
+
+* [http://namecoin.info/files/namecoind_v350_win32.zip Windows] by [http://dot-bit.org/forum/viewtopic.php?p=3050#p3050 phelix]
+
+* [http://dot-bit.org/files/namecoin_osx32.bz2 OS X 32bits] by [http://dot-bit.org/forum/viewtopic.php?p=1981#p1981 twobits]
+
+Version 3.24.63 :
+
+* [http://dot-bit.org/files/ Older versions + md5]
+
+== Source ==
+
+* [https://github.com/namecoin/namecoin Official tree]
+
+* [https://github.com/vinced/namecoin Vinced's tree]
+
+* [https://github.com/khalahan/namecoin Khal's tree]
+
+* [[BuildNamecoinQTFromSource|Building namecoin-qt from source]]
+
+* [[BuildNamecoinFromSource|Building namecoind from source]]
+
+== Ways To Help ==
+
+* [[Namecoin_DNS:Site_support|Donate to support the project]]
+* Test softwares and make reports
+* Help people on IRC and on the forum
+* Start translating the wiki
+* Speak about namecoin to your friends
+</div>
+
+<div style="clear: both; padding-top: 40px;">
+
+== Development ==
+
+* mailing list : [http://dot-bit.org/cgi-bin/mailman/listinfo/namecoin-dev-dot-bit.org namecoin-dev] ([http://dot-bit.org/pipermail/namecoin-dev-dot-bit.org/ archives])
+* [[TODO]]
+* [http://dot-bit.org/forum/viewforum.php?f=5 Discuss about project direction]
+* [[Namecoin in the news]]
+
+== Draft Proposals ==
+
+* [[Name Exchange]] - Draft for built-in name exchange
+* [[Namecoin WUI]] - Draft for a Web User Interface (WUI)
+* [[Voicedotbit]] - namecoind controller GUI
+* [[Namecoin Wikipedia article]] - Draft for a Namecoin article according to Wikipedia guidelines
+
+{{:Namespace}}
+
+== Project tasks ==
+
+{|class="wikitable" border="1" cellspacing="0" cellpadding="5" style="border: 1px solid black; border-collapse: collapse;"
+|- style="font-weight:bold;"
+|Complete||Name||Summary||Updated
+|-
+|90%||[[Tasks-Namecoin|Namecoin]]||Software for the decentralized domain name system||2011-11-02
+|-
+|10%||[[Tasks-NamecoinGUI|Namecoin GUI]]||GUI to manage domain names||2011-11-20
+|-
+|70%||[[Tasks-DNSTools|DNS Tools]]||Tools to build your own DNS server with .bit domains||2012-03-07
+|-
+|70%||[[Tasks-EndUserBrowsing|Easy browsing]]||Easy end user tools to browse .bit domains||2012-03-07
+|}
+
+</div>

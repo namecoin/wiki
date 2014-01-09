@@ -1,0 +1,73 @@
+__TOC__
+
+This is a proposal for an extended specification for [[Namecoin]]. In the meantime, [[HowToRegisterAndConfigureBitDomains|you can configure your domain with the current specification]].
+
+Please join in with your ideas [[Talk:Name_Exchange|here]], on the [http://dot-bit.org/forum/viewtopic.php?f=5&t=220 forum] or the IRC (<tt>#namecoin@freenode</tt>).
+
+Our basic goals are:
+
+* Allow built-in exchanging of NMC for .bit names, and vice-versa.
+
+== Preface ==
+
+At present, when someone purchases a .bit name they own it until expiration.  They can transfer the name to someone else if they'd like, or they can keep renewing it every 12,000 blocks if they so choose.  This means that early adopters (or anyone who has purchased a desired name) anonymously owns a name for as long as they'd like.
+
+Suppose User2 wants example.bit, but it is already owned by User1.  User2 either needs to wait for example.bit to expire (and for User1 to not renew it), or User2 must contact User1 and offer to purchase example.bit.
+
+The first problem with the current setup is that there is no way to determine who owns what name (other than looking up the anonymous NMC address of the domain owner).  Once this address is determined, there is no way to contact the owner to purchase the domain.  3rd party exchanges have been (or will be) established to allow for OTC or escrow-based sales of .bit domains, however, this requires the domain owner to initially offer the name for sale and wait for a buyer to find his sale offer.  This may or may not ever occur, and the 3rd party nature of this allows for multiple exchanges to be established, further complicating the matter.  On top of that, with an escrow-based exchange, .bit domain names are only as secure as the exchange is.  If an exchange were to be compromised, a potentially large number of .bit names could be stolen.  This could be potentially catastrophic.
+
+== Proposal ==
+
+The proposed solution is to build an exchange functionality into Namecoin itself.  Rather than requiring name exchanges to be done via 3rd-party providers, Namecoin will allow for sending offers and counter-offers for the sale of .bit domain names.
+
+The proposed commands are:
+
+*'''offer_buy''' <name> <price in NMC> [Validity time]
+
+ *Send an offer to buy a Namecoin name to the owner of the specified name.
+ *Validity time optional.  It is the number of days the offer is  valid for.  Default is 7 days.
+ *Example: namecoind offer_buy d/example 50
+  *Offers 50NMC to the owner of d/example to purchase the name.
+
+
+*'''offer_accept''' <offer_id> <name>
+
+ *Accept the offer to sell the name specified in the offer_id for the offered number of NMC.
+ *Example: namecoind offer_accept 934269352034 d/example
+  *Accepts offer 934269352034 to sell d/example for the price specified in the offer.
+
+
+*'''offer_reject''' <offer_id> <name> [counter-offer in NMC]
+
+ *Reject the offer to sell the name specified in the offer_id for the specified number of NMC.  
+ *Counter-offer is optional.  It rejects the offer but sends the user that initiated the offer a suggested sell price in NMC.
+ *This counter-offer is non-binding.  It is simply an indication that the name owner would be willing to sell the name 
+ for the counter-offer price, but is not required to.
+ *Example: namecoind offer_reject 934269352034 d/example 75
+  *Rejects offer 934269352034  to sell d/example for the price specified in the offer and counter-offers with a price of 75 NMC.
+
+*'''offer_complete''' <offer_id> <name> <price in NMC>
+
+ *Completes the name purchase transaction specified in offer_id.  <name> and <price> are included to ensure correctness.
+ *Only valid if name owner has completed the offer_accept process.
+  *Example: namecoind offer_complete d/example 50
+
+Additional proposal
+
+*'''name_status''' <name> [status]
+
+ *Returns or sets the name status, for example LOCKED|ACTIVE|SELLING|FREE
+ *This would indicate whether the owner is likely to consider an offer
+ *LOCKED status could require n confirmations before changing status or being transferred, and possibly prevent offers from being generated
+ *Example: namecoind name_status d/example FREE
+  *Indicates the owner is willing to transfer the domain before the domain expiry time, possibly in return for name_firstupdate fee
+
+== Privacy ==
+
+In order to protect the buyer from losing his offer to someone with more NMC to spare who becomes aware of the offer by watching the block chain, the offer price will be encrypted into the block chain using the name owner's public key.  This will be readable only by the name owner.
+
+== Technical ==
+
+When an offer is made, it is specified by an offer_id.  This offer_id contains details regarding the buyer, the seller, the name being discussed and the offered sale price.  If the offer is rejected and a counter-offer is provided, the counter-offer will be included as well.  To protect against the threat described in [[Exchange#Privacy]], offer price and counter-offer price will be encrypted using public keys.
+
+When a seller receives and accepts an offer, he is placing the name in escrow, as described [https://en.bitcoin.it/wiki/Contracts#Example_2:_Escrow_and_dispute_mediation here] and signing off on it.  The buyer then needs to run an offer_complete, if he wishes to complete the transaction, which will provide the second sign-off needed on the name transfer and also initiate a NMC transfer to the seller.  By allowing for the actual fund transfer to occur after the offer is accepted, the buyer is not required to have previously owned the offered number of NMC.  This means that a user wishing to purchase a name for 1000 NMC,  but who has no use for 1000 NMC unless he can get the name he wants, isn't required to purchase the needed NMC until he is certain he is able to use the NMC to purchase the desired name.

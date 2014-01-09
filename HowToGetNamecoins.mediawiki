@@ -1,0 +1,42 @@
+How To Get Namecoins
+
+== Bitcoin Faucets ==
+
+1. Register account at exchange that supports trading BTC for NMC. For example [https://btc-e.com BTC-E.]
+
+2. Find free Bitcoin faucet, for example https://freebitcoins.appspot.com/, and transfer some free bitcoins to get account from the exchange.
+
+3. Convert your free Bitcoins to some Namecoins!
+
+At the time of this writing, you can get about 0.35 NMC using this method, which is enough to register about 15 domain names.
+
+== Mining ==
+
+Namecoins are mined in the same method as bitcoins.
+
+*[http://www.weusecoins.com/mining-guide.php General mining guide]
+
+At the time of writing, the only way of mining Namecoins efficiently is ''merged mining'', i.e. Namecoins are mined as a free by-product of Bitcoin mining. Only a few mining pools offer merged mining, see [http://en.bitcoin.it/wiki/Comparison_of_mining_pools Comparison of Mining Pools].
+
+== Namecoin Exchanges ==
+
+* See the [[Trade]] page for a list of exchanges that sell namecoins.
+
+== Over the counter (OTC) trading ==
+
+* [http://bitcoin-otc.com/vieworderbook.php?eitherthing=NMC #bitcoin-otc orderbook for NMC]
+* [http://dot-bit.org/forum/viewforum.php?f=10 Dot-BIT trading forums]
+
+== Bounties/Rewards ==
+
+* [http://dot-bit.org/forum/viewtopic.php?f=13&t=36 paid blogging on Rejuvepedia]
+
+== Receiving Namecoins ==
+
+To receive namecoins, you'll need a namecoin address.  To generate a new address, do:
+
+<span style="border: 1px solid grey; padding: 3px; margin-left: 20px;">''./namecoind getnewaddress''</span>
+
+Each time you type this command, this will generate a new address. Namecoin addresses start with the letter 'N' or 'M' (example : N1KHAL5C1CRzy58NdJwp1tbLze3XrkFxx9)
+
+Note: old namecoins addresses start with 1, like bitcoin addresses. To avoid confusion, format has been changed.

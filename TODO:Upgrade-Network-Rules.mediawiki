@@ -1,0 +1,11 @@
+'''Steps :'''
+
+Step 1 :
+* set max value size to 9k (for miners, in createblock)
+* set min tx fee to xxNMC (clients)
+* etc
+
+Step 2 :
+* set min relay tx fee to yyNMC
+* set max value size to 9k (for clients)
+* etc

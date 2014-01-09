@@ -1,0 +1,1 @@
+'''.bit''' is a top-level domain in which domain names can be purchased with [[Namecoin]] currency.

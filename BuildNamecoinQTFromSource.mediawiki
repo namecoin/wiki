@@ -1,0 +1,43 @@
+Add below tips and links for namecoin-qt build experiences on various platforms;
+
+==Linux==
+
+===Dependencies===
+
+Make sure you met the dependencies specific for your distibution. You should now be able to compile <tt>namecoin-qt</tt> using the generic instructions below. If your distribution is not listed try to match the packages and install them using your native distribution package manager. It would be great if you add your findings here, so that others might benefit from your work.
+
+==== Ubuntu ====
+
+ sudo apt-get install libboost-chrono-dev          \
+                      libboost-date-time-dev       \
+                      libboost-filesystem-dev      \
+                      libboost-program-options-dev \
+                      libboost-serialization-dev   \
+                      libboost-system-dev          \
+                      libboost-thread-dev          \
+                      libboost-dev libdb5.1++-dev  \
+                      git qt4-qmake libqt4-dev     \
+                      build-essential              \
+                      qt4-linguist-tools libssl-dev
+
+===Generic compile instructions===
+
+This should work on all Linux based distributions if all dependencies are satisfied.
+
+ git clone https://github.com/namecoin/namecoin.git
+ cd namecoin
+ git checkout namecoin-qt
+ cd project
+ qmake "USE_UPNP=-"
+ make
+
+This produces the binary <tt>namecoin-qt</tt> in <tt>namecoin/project</tt> directory.
+
+
+
+==Windows==
+https://github.com/phelixnmc/namecoin-qt
+Note the link to the readme at the top.
+Usage: Download the .zip archive via the button on the right. Unpack. Double click "__all_easywinbuilder.bat". Follow instructions.
+
+==MacOSX==

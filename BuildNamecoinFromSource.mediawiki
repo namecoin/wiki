@@ -1,0 +1,55 @@
+Add below tips and links to blogged Namecoin build experiences on various platforms;
+
+== Source build links : ==
+
+
+Ubuntu
+
+* [http://www.bluishcoder.co.nz/2011/05/12/namecoin-a-dns-alternative-based-on-bitcoin.html Bluish Coder]
+
+
+CentOS, RH-derivative 
+
+* [http://blog.austinheap.com/compiling-namecoin-on-centos/ Austin Heap].
+* provides a makefile (out of date as of dec-7-2011, changes ported to current makefile.unix -> http://pastebin.com/8f79cMja --keepishop)
+* local dep. library template probably work fine for other *nix too
+
+==Linux==
+
+===Dependencies===
+
+Make sure you met the dependencies specific for your distibution. You should now be able to compile <tt>namecoind</tt> using the generic instructions below. If your distribution is not listed try to match the packages and install them using your native distribution package manager. It would be great if you add your findings here, so that others might benefit from your work.
+
+====Ubuntu 12.04 (Precise Pangolin)====
+
+ aptitude install libboost-chrono1.48-dev          \
+                  libboost-date-time1.48-dev       \
+                  libboost-filesystem1.48-dev      \
+                  libboost-program-options1.48-dev \
+                  libboost-serialization1.48-dev   \
+                  libboost-system1.48-dev          \
+                  libboost-thread1.48-dev          \
+                  libboost1.48-dev libdb5.1++-dev  \
+                  git
+
+
+=== Tips for building from source : ===
+
+* the official binaries are built using https://github.com/namecoin/namecoin
+* standard Namecoin/Bitcoin build notes are in with source ~/namecoin/build-*.txt
+* optionally building without upnp support
+ make -f makefile.unix USE_UPNP=''
+* Install libglib2.0-dev if you have the following error :
+ /usr/bin/ld: cannot find -lgthread-2.0
+
+===Generic development compile instructions===
+
+This should work on all Linux based distributions if all dependencies are satisfied. 
+
+(WARNING!!: this method uses the latest development code from the git repo. It that may be UNTESTED, you could LOSE COINS or corrupt your wallets. Back-up your wallet before using this code!)
+
+ git clone https://github.com/namecoin/namecoin.git
+ cd namecoin/src
+ make -f makefile.unix namecoind
+
+This produces the binary <tt>namecoind</tt> in <tt>namecoin/src</tt> directory.

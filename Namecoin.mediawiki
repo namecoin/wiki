@@ -1,0 +1,51 @@
+__NOTOC__
+==What is Namecoin==
+Namecoin is a distributed naming system based on bitcoin technology (a cryptocurrency).
+
+[[Namecoin]] is a peer-to-peer '''generic''' name/value datastore system based on [http://www.bitcoin.org/ Bitcoin] technology (a decentralized cryptocurrency).
+It allows you to:
+* Securely register and transfer arbitrary names (keys), '''no possible censorship!'''
+* Attach values (data) to the names (up to 1023 bytes)
+* Trade and transact namecoins, the digital currency '''NMC'''
+
+There are plenty of possible [[use cases]]. Some examples:
+
+ '''[Name]''' => '''[Value]'''
+ DNS: domain_name => domain_zone_configuration
+ Identity: user_name => user_public_identity (email, name, gpg key, etc)
+ Timestamping: document_hash => document_infos (name, hash, owner, etc)
+
+To register a name, you must own some [[HowToGetNamecoins|namecoins]] (NMC, the internal cryptocurrency used by the software).
+
+==Main features==
+* '''distributed/decentralized''': each user has its own copy of the full database
+* '''secure''': security (with public/private keys) is deeply integrated in the software to allow only the owner of a name to modify it in the distributed database. 
+* '''pseudonymous''': all transfers of data are public and linked to random generated addresses
+* '''open''': anybody can use namecoin to register a name or to create its own [[Namespace]]
+
+First release of [http://github.com/namecoin/namecoin namecoin source code] was [http://bitcointalk.org/index.php?topic=6017.0  announced on April 18, 2011].
+
+==Projects using Namecoin==
+* '''[[Dot-BIT]]''': a domain name system (DNS) using the .bit TLD.
+
+==Logo==
+Logo forum thread: http://dot-bit.org/forum/viewtopic.php?f=2&t=486
+
+Phelix' suggestion: [http://bitcoinx.com/pics/logo7.svg .svg], [http://bitcoinx.com/namecoin/nmc.png small bitmap for bright background], [http://bitcoinx.com/pics/logo7.png large bitmap for bright background]
+
+==News==
+* [https://twitter.com/#!/khalahan33 Twitter] ([http://dot-bit.org/files/rss/twitter_khalahan33.rss rss])
+* [https://plus.google.com/107506677513657103798 Google+]
+* [http://www.reddit.com/r/Namecoin/ Reddit] ([http://www.reddit.com/r/Namecoin.rss rss])
+
+==See Also==
+
+* [[HowToGetNamecoins|How To Get Namecoins]]
+* [[Trade|Namecoin exchanges]]
+* [[Pools|Namecoin pools]]
+
+
+==External Links==
+* [http://dot-bit.org/  Namecoin — Dot-BIT project]
+* [http://dot-bit.org/tools/ Namecoin Tools]
+* [http://github.com/namecoin/namecoin Namecoin Sources] on GitHub

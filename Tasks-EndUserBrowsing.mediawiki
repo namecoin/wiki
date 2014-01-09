@@ -1,0 +1,15 @@
+== Web proxies ==
+
+* No installation needed
+
+* [[List Of Web Proxies]]
+
+== App proxies ==
+
+* Not available yet
+
+== DNS suffixes ==
+
+* Easy to install
+
+* [[How To Install Dns Suffix]]

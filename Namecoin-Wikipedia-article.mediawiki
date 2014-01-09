@@ -1,0 +1,17 @@
+This page is for a proposed Namecoin article for Wikipedia.
+
+==Notes==
+* http://en.wikipedia.org/wiki/Wikipedia:Identifying_reliable_sources
+* [[Namecoin in the news]]
+* Source search: 
+**[http://www.google.com/search?as_eq=wikipedia&amp;q=%22Namecoin%22&amp;num=50  google]
+**[http://news.google.com/archivesearch?&as_src=-newswire+-wire+-presswire+-PR+-release+-wikipedia&q=%22Namecoin%22  news]
+**[http://www.google.com/search?tbs=bks:1&q=%22Namecoin%22  books]
+**[http://scholar.google.com/scholar?q=%22Namecoin%22  scholar]
+**[http://images.google.com/images?safe=off&as_rights=(cc_publicdomain%7ccc_attribute%7ccc_sharealike%7ccc_noncommercial%7ccc_nonderived)&q=%22Namecoin%22  free images]
+
+* Article in German Wikipedia: http://de.wikipedia.org/wiki/Namecoin
+
+==Draft==
+
+'''Namecoin''' is a distributed naming system based on Bitcoin.[http://techcrunch.com/2011/07/18/ruxum-wall-street-level-security-comes-to-bitcoin-with-new-exchange/][http://tech.fortune.cnn.com/2011/06/17/the-clock-is-ticking-on-bitcoin/][http://www.download.bg/index.php?cls=news&mtd=single&id=589173][http://forum.bitcoin.org/?topic=6017.0]

@@ -1,0 +1,45 @@
+= Namecoin =
+
+== Summary ==
+Register and manage names on a decentralized and p2p system.
+
+== Owner ==
+* Name: vince
+* Email: 
+
+== Current status ==
+* Last updated: 2011-10-08
+* Percentage of completion: 90%
+* Sources : https://github.com/namecoin/namecoin
+
+== Detailed Description ==
+* register and manage .bit domains
+* make an installer and work like a service
+
+== Limitations ==
+* Currently limited to one TLD.
+* Currently no auto renewal of names
+* You must own namecoins to register a domain
+
+== Scope ==
+
+* Avoid control of domains by external entities.
+
+* Register domains anonymously.
+
+== How To Test ==
+* Download the [http://dot-bit.org/ namecoin software] and use RPC commands.
+
+== Dependencies ==
+None
+
+
+== Documentation ==
+* [https://github.com/namecoin/namecoin/blob/master/DESIGN-namecoin.md Design]
+* [https://github.com/namecoin/namecoin/blob/master/README.md Readme]
+* [https://github.com/namecoin/namecoin/blob/master/FAQ.md FAQ]
+* [https://github.com/namecoin/namecoin/blob/master/TODO-namecoin Todo]
+
+== Release Notes ==
+
+None

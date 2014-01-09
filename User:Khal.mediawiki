@@ -1,0 +1,13 @@
+Dot-bit.org owner
+
+[https://bitcoin-contact.org/identity/khal Bitcoin identity] :
+
+Mail : khal at dot-bit.org
+
+Bitcoin : 1KHAL8bUjnkMRMg9yd2dNrYnJgZGH8Nj6T
+
+Namecoin : N1KHAL5C1CRzy58NdJwp1tbLze3XrkFxx9
+
+GPG id : 9CC5B92E965D69A9
+
+GPG fingerprint : 3EF2A1FF5B9F651B95638E8F9CC5B92E965D69A9

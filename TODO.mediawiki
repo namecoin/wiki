@@ -1,0 +1,21 @@
+= Namecoin software =
+
+* [[TODO:Upgrade Network Rules|Upgrade network rules]] : [https://dot-bit.org/forum/viewtopic.php?f=5&t=1016 fees], size of data
+* [[TODO:Upgrade Namecoin Code|Rebase on latest bitcoin code]] ([http://dot-bit.org/forum/viewtopic.php?f=5&t=1009 in progress])
+* Make a namecoin-bundle for endusers (namecoind + nmcontrol + convergence + foxyproxy + what else is needed for end users)
+
+= Related softwares =
+
+* [https://dot-bit.org/forum/viewtopic.php?f=8&t=525 nmcontrol] [python] : support spec v2, make the web GUI, etc
+* [https://dot-bit.org/forum/viewtopic.php?p=4285#p4285 convergence] [firefox plugin] : try to make DNS resolution from nmcontrol + support .bit in http (https already there)
+
+= Promotion =
+
+* [[Namespace:Identity|Promote the ID system]] to bitcoin, alt-coins, bitmessages (use nicknames instead of abstact addresses)
+* [[Namespace|Promote all namespaces]] to their matching users
+* [[Use_cases|Improve the "Use_cases" page]] (more details, more structured)
+
+
+= DONE =
+
+* Code an official Namecoin GUI (for transactions & names) ([http://dot-bit.org/forum/viewtopic.php?f=2&t=998 released])

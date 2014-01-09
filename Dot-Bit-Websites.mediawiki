@@ -1,0 +1,31 @@
+'''Popular .bit enabled websites'''
+
+[http://bluishcoder.bit bluishcoder.bit]<br>
+[http://bitcoinX.bit bitcoinX.bit] with shortcuts [http://bx.bit bx.bit] and [http://nx.bit nx.bit] (namecoin stats)<br>
+[http://bitse.bit bitse.bit] (.bit search engine)<br>
+[http://dot-bit.bit dot-bit.bit]<br>
+[http://explorer.bit explorer.bit]<br>
+[http://dns.bit dns.bit]<br>
+[http://register.bit register.bit]<br>
+[http://14u.bit 14u.bit] (URL shortener)<br>
+[http://namealert.bit namealert.bit] (domain expiration alert)
+
+'''.bit redirections'''
+
+[http://bitcoin.bit bitcoin.bit]<br>
+[http://lolicore.bit lolicore.bit]<br>
+[http://coinballer.bit coinballer.bit]<br>
+
+'''Links down or parked'''
+
+[http://thepiratebay.bit thepiratebay.bit]<br>
+[http://bitcointorrentz.bit bitcointorrentz.bit]<br>
+[http://gee.bit gee.bit] (.bit search engine)<br>
+[http://kirk.bit kirk.bit]<br>
+[http://wikileaks.bit wikileaks.bit]<br>
+[http://organicdesign.bit organicdesign.bit]<br>
+[http://bitcointalk.bit bitcointalk.bit]<br>
+
+'''Other .bit Enabled Websites'''
+
+[http://smart.bit smart.bit] (Programming Blog)<br>

@@ -1,0 +1,254 @@
+== Test with a working .bit domain ==
+
+After you have chosen one of the configurations below, you can test it by visiting following url, which should display the dot-bit wiki :
+
+=> http://dot-bit.bit
+
+== Existing softwares ==
+
+Here is a list of existing softwares to make your own DNS and/or proxy server :
+
+[[DNS and Proxy softwares]]
+
+== Use a DNS server that support .bit domains ==
+
+By using a DNS server, some advanced features like tor redirection and TLS support won't be available.
+
+=== Change your DNS to one with .bit support ===
+
+==== Replace your DNS server with a compatible one ====
+
+The first method is to add a new DNS server with .bit support on your computer.
+
+[http://wiki.opennicproject.org/ConfiguringYourComputer Instructions on OpenNIC to configure DNS] (for Windows, Mac, Linux, etc)
+
+Just replace the IP they propose with one in the list below.
+{{:List_Of_DNS_Servers}}
+<!-- Geolocation info by http://www.wolframalpha.com/ -->
++ : easy to configure
+
+- : you are Not fully autoNomous, limited to what a DNS server can do
+
+==== Use another DNS server only for .bit domains with dnsmasq (linux) ====
+
+Install dnsmasq :
+
+ apt-get install dnsmasq
+
+Copy the file /etc/resolv.conf to /etc/resolv.conf.standard : this file will be used to resolve all DNS requests except .bit
+
+Edit the file /etc/resolv.conf and fill it with :
+
+ nameserver 127.0.0.1
+
+Create the file /etc/dnsmasq.d/dot-bit and fill it with (178.32.31.41 can be replaced with any IP in the table of DNS servers above) :
+
+ resolv-file=/etc/resolv.conf.standard
+ strict-order
+ server=/bit/178.32.31.41,/glue/178.32.31.41,/geek/178.32.31.41,/free/178.32.31.41,/indy/178.32.31.41,/parody/178.32.31.41,/bbs/178.32.31.41,/fur/178.32.31.41,/null/178.32.31.41,/oss/178.32.31.41,/ing/178.32.31.41,/dyn/178.32.31.41,/gopher/178.32.31.41,/micro/178.32.31.41
+
+Restart dnsmasq :
+
+ /etc/init.d/dnsmasq restart
+
++ : easy to configure, you still use your traditional DNS server for other requests
+
+- : you are not fully autonomous, limited to what a DNS server can do
+
+==== Use another DNS server only for .bit domains with dnsmasq on a Tomato Router ====
+
+In your router, flashed with Tomato firmware, navigate to Advanced>DHCP/DNS. Scroll down to DNSmasq custom configuration and insert the following code (178.32.31.41 can be replaced with any IP in the table of DNS servers above):
+
+ server=/bit/178.32.31.41,/glue/178.32.31.41,/geek/178.32.31.41,/free/178.32.31.41,/indy/178.32.31.41,/parody/178.32.31.41,/bbs/178.32.31.41,/fur/178.32.31.41,/null/178.32.31.41,/oss/178.32.31.41,
+ /ing/178.32.31.41,/dyn/178.32.31.41,/gopher/178.32.31.41,/micro/178.32.31.41
+
+Then, click save.
+
+==== Use another DNS server only for .bit domains with dnsmasq on a dd-wrt Router ====
+
+In your router, flashed with dd-wrt firmware, navigate to Security>Services. Scroll down to DNSmasq, make sure it is enabled and in the custom configuration box insert the following code (178.32.31.41 can be replaced with any IP in the table of DNS servers above):
+
+ server=/bit/178.32.31.41,/glue/178.32.31.41,/geek/178.32.31.41,/free/178.32.31.41,/indy/178.32.31.41,/parody/178.32.31.41,/bbs/178.32.31.41,/fur/178.32.31.41,/null/178.32.31.41,/oss/178.32.31.41,
+ /ing/178.32.31.41,/dyn/178.32.31.41,/gopher/178.32.31.41,/micro/178.32.31.41
+
+Then, click save and then apply settings.
+
+=== Make your own DNS server that support .bit domains ===
+
+==== BIND9 support that forward .bit requests to existing servers ====
+
+In your named.conf.local file add:
+
+ zone "bit" {
+     type forward;
+     forwarders {
+         192.249.59.88; // Georgia bit DNS
+         178.32.31.41; // French bit DNS
+         78.47.86.43; // German bit DNS
+     };
+ };
+
++ : easy if you have BIND running already
+
+- : you are not fully autonomous
+
+===== MrCaseyJames BindCoin Forwarder (Ubuntu + Bind9) =====
+
+This is a shell script for Ubuntu (works best with a fresh install) to setup a Public DNS Server with Bind9 to add support to resolve the TLD .bit with use of forwarders. This utilizes Bind and also checks hourly for the current list of public .bit DNS servers. This script will simplify the process greatly.
+
+[http://mrcaseyjames.com/?page_id=261 MrCaseyJames BindCoin Forwarder (Ubuntu + Bind9)]
+
+==== BIND9 full support with NamecoinToBind ====
+
+This script generate zone files for BIND9 from all existing .bit domains.
+Announce : https://dot-bit.org/forum/viewtopic.php?f=9&t=315
+Readme : https://github.com/khalahan/NamecoinToBind/blob/master/README
+
++ : you are fully autonomous and nobody can fake your DNS requests
+
+- : need to install bind + php
+
+===== MrCaseyJames BindCoin Installer (Ubuntu + Bind9 + NamecoinToBind) =====
+
+This is a shell script for Ubuntu (works best with a fresh install) to setup a Public DNS Server with Bind9 to add support to resolve the TLD .bit with use of PHP and NamecoinToBind. This utilizes Bind, Namecoind, NamecoinToBind, and PHP. This script will simplify the process greatly.
+
+[http://mrcaseyjames.com/?page_id=251 MrCaseyJames BindCoin Installer (Ubuntu + Bind9 + NamecoinToBind) Project Page]
+
+==== TinyDNS full support with Namecoin-TinyDNS-Data ====
+
+This script generate zone files for TinyDNS from all existing .bit domains.
+Announce : http://dot-bit.org/forum/viewtopic.php?p=3037
+Readme : https://github.com/tkooda/namecoin-tinydns-data/blob/master/README.md
+
++ : you are fully autonomous and nobody can fake your DNS requests
+
+- : need to install TinyDNS (http://cr.yp.to/djbdns/tinydns.html)
+
+==== Partial support with namecoin-hosts ====
+
+https://bitcointalk.org/index.php?topic=6017.msg97623#msg97623
+
++ : you are fully autonomous and nobody can fake your DNS requests
+
+- : ip support only, no full zone forward
+
+==== Semi-support ====
+While a BIND forward for a .bit zone would be nice, I found a simpler solution. I did not want to use the open Namecoin DNS servers as my primary nameservers.
+
+#Get [[http://dnrd.sourceforge.net/ Domain Name Relay Daemon]]
+#Do something like this...
+#:NAMECOIN_NS1=78.47.86.43
+#:NAMECOIN_NS2=178.32.31.41
+#:NORMAL_NS=192.168.1.1
+#:dnrd -d 1 -b -l -s $NAMECOIN_NS1:<b>bit</b> -s $NAMECOIN_NS2:<b>bit</b> -s $NORMAL_NS
+#Test: dig @localhost dot-bit.bit
+#Set localhost in /etc/resolv.conf, if acceptable.
+
+<i>Note: I've only just begun to play with DNRD, but it seems fairly flexible, and can serve as a simple master without some of the overhead of BIND, especially on embedded systems -- The project seems to support cygwin/linux/*bsd. I see a portfile for it, but no .deb's. This also leaves you room for TLDs in private VPNs. Unsure about IPv6 DNS server support.</i>
+
+=== Use a server that mirrors .bit under a traditional domain name ===
+
+
+==== Partial support with bitname.org ====
+
+'''Site went offline, unreachable from date: 04.01.2012'''
+
+http://bitname.org/ - to, e.g., resolve wikileaks.bit resolve wikileaks.bitname.org instead
+
++ : works out of the box, you do not need to configure your own server
+
+- : destination site must support bitname.org, e.g., if name-based virtual hosting is used or if request is forwarded to another nameserver
+
+==== Full support with [http://www.namecoin.us/ NamecoinUs] ====
+
+'''Site is offline (2012-02-11)'''
+
+Public DNS service and transparent gateway -- http://namecoin.us/
+
+DNS Services:
+* For example: http://example.bit => http://example.namecoin.us/
+* Six nameserver clusters you can use: ns0.namecoin.us, ns1.namecoin.us, ns2.namecoin.us, ns3.namecoin.us, ns4.namecoin.us, ns5.namecoin.us
+* Linked resolution (both NS and A Namecoin records)
+** Destination site must support namecoin.us in their server configuration
+
+Transparent Gateway
+* For example: http://example.bit => http://example.bit.namecoin.us/
+** Notice the extra .bit part *important*
+* Inline proxying for .bit TLD
+* Useful if natural DNS resolution with above system is unsuccessful
+
+Greasemonkey helper script for Namecoin.us:
+* Rewrite links automatically for example: http://*.bit/foo => http://*.namecoin.us/foo
+* [http://userscripts.org/scripts/show/104116 Namecoin Enabler for Greasemonkey]
+
+==== Full support with DNS suffix resolution - recommended for new users====
+Depending on specialized servers but otherwise an easy and efficient method.
+[http://dot-bit.org/How_To_Install_Dns_Suffix Detailed installation information]
+
+[http://dot-bit.org/forum/viewtopic.php?p=2584#p2584 Forum thread with more information] and a working server.
+
+Mainstream OSes (Windows, Mac OS X, Linux) have a feature called DNS suffix lookups
+* Windows: http://support.microsoft.com/kb/305553#5
+* Mac OS X: http://www.dns-sd.org/ClientBrowseOnly.html
+* Flat POSIX: prepend "search domain-name" to the /etc/resolv.conf
+
+== Use a remote proxy with the Firefox add-on, FoxyProxy  ==
+
++ : Easy, fast solution to get you browsing .bit domains. Only .bit domains will be proxied.
+
+- : All .bit DNS requests go via central point proxy.masterpool.eu at present.
+
+
+Installing the FoxyProxy Standard Firefox Add-on and configuring to point at proxy.masterpool.eu is described in links below:
+
+1) [https://masterpool.eu/proxy Config file import method]
+
+(Use if you have NO existing proxy settings in Firefox)
+
+Or
+
+2) [http://dot-bit.org/forum/viewtopic.php?f=9&t=215&start=10#p1158 Manually configure the proxy pattern.]
+
+(Use if you have existing proxy settings in Firefox)
+
+== Use a local proxy in your applications ==
+
+You'll need to install namecoin + a proxy on your computer and to configure your browser to use this proxy.
+
+You'll need to configure the proxy for each software that needs to access .bit domains (web, ftp, etc)
+
++ : you are fully autonomous and nobody can fake your DNS requests, full support of namecoin features will be possible
+
+- : not an easy solution, need to configure for each application
+
+=== With NmcSocks ===
+
+Install and run a local proxy that support most of the draft spec :
+
+Announce & help : http://dot-bit.org/forum/viewtopic.php?f=9&t=219
+
+Sources : https://github.com/itsnotlupus/nmcsocks
+
+When using Google Chrome/Chromium, avoid the FoxyProxy plugin as it seems to not work with this browser[https://dot-bit.org/forum/viewtopic.php?p=2392#p2392]. Using NmcSocks with Google's built-in proxy configuration is sufficient, and it seems to work for all URLs including non-.bit TLDs.
+
+=== With a modified ncproxy ===
+
+Install polipo + the [https://github.com/vinced/namecoin/tree/master/client modified ncproxy]
+
+More instructions on the [https://github.com/vinced/namecoin/blob/master/client/README.md readme file]
+
+=== With a modified polipo ===
+
+Install the modified polipo only.
+
+https://bitcointalk.org/index.php?topic=6017.msg96826#msg96826
+
+== Use ncproxy and FoxyProxy for fully autonomous over Tor ==
+
++ : fully autonomous local namecoind domain name look-ups (nobody can fake your DNS requests)
+
+- : some configuration is needed
+
+Install Vidalia, polipo, namecoind (includes ncproxy), Firefox with FoxyProxy Standard Add-on, then follow the instructions in the link here:
+
+[http://dot-bit.org/forum/viewtopic.php?p=1448#p1448 Fully autonomous .bit browsing over Tor]

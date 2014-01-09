@@ -1,0 +1,105 @@
+<div class="plainlinks">
+The following is a list of sites that currently accept Namecoin. Please only list services that are presently available (that is, NOT "available soon") and accepting namecoins.
+
+Note: it still remains up to you to decide whether you trust the service provider or not.
+
+==Currency Exchange==
+
+{| class="wikitable sortable" border="1" cellpadding="5" style="width: auto; text-align: center; font-size: smaller; border-collapse: collapse; table-layout: fixed;"
+! Service
+! BTC
+! LTC
+! USD
+! EUR
+! PLN
+! CZK
+! RUB
+! AUD
+! Trade Fee
+! Withdraw Fees
+! Observations
+|-
+| {{rh}} | [https://crypto-trade.com/ref/jooooo7824 CryptoTrade]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| 0.2 %
+| 0.01 NMC / 0.001 BTC
+| Buy NMC with BTC or USD. Funding by [https://www.okpay.com/?rbp=new_account OKpay] and [https://perfectmoney.com/signup.html?ref=921548 PerfectMoney]
+|-
+| {{rh}} | [http://www.liliontransfer.org/?strona=cennik&ref=98876 Lilion Transfer]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| varies
+| varies
+| Lilion Transfer is a Money Exchange in eastern Europe, but serves customers from whole the world.
+Lilion Transfer exchanges 20 national currencies, 70 e-currencies, 20 e-purses and 3 cryptocurrencies.
+Lilion Transfer has 217 bank accounts in 64 banks all over the world. Most of the transfers are instant.
+|-
+| {{rh}} |  [https://vircurex.com/welcome/index?referral_id=444-13120 Vircurex]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| 0.2 %
+| 0.002 BTC / 0.01 NMC
+| Trade nmc against most of the alt-coins. <br><s>USD and EUR via VouchX available at [https://www.aurumxchange.com/buy/ AurumXchange</s>]
+|-
+| {{rh}} | [https://btc-e.com/ BTC-e]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{yes}}
+| {{no}}
+| 0.2 %
+| 0.001 BTC / 0.1 NMC
+| The main exchange for NMC, buy with BTC and USD. Funding available via wire, [https://www.okpay.com/?rbp=new_account OKpay] and many others.
+|-
+| {{rh}} | [https://www.cryptsy.com/ Cryptsy]
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| 0.2 %
+| 0.0005 BTC / 0.01 NMC
+| Alternative Cryptocurrency exchange
+|-
+| {{rh}} | [http://coinmkt.com CoinMKT ]
+| {{yes}}
+| {{yes}}
+| {{yes}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| {{no}}
+| ?
+| ? BTC / ? NMC
+| Coming soon to US markets.
+|}
+
+==See Also==
+
+* [[Donation-accepting organizations and projects]]

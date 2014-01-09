@@ -1,0 +1,10 @@
+I2P specification is nice, but in contrast to tor it shouldn't be used on regular domains. Tor user is likely to have all his traffic to go through tor, so an image referred from .onion site to a regular one won't disclose too much information. This isn't the case with I2P. There are different I2P installation cases. The most secure is deny non-I2P completely. But we can still open another browser and copypaste the link that's interesting to us. The most insecure (what I'm using right now) is a PAC script redirecting .i2p requests to a localhost proxy.
+
+In the best case browser should be able to browse every network simultaneously, but deny non-I2P<->I2P requests in a manner similar to blocking HTTP on a HTTPS page, but in both directions. When following a link from non-I2P to I2P (or either way) browser should display a page asking to continue visiting this website. Referer header is absent either way. It would be nice if browsers have this protection out-of-box no matter whether I2P is installed or not.
+
+So, we use alternate pseudoTLD for security measures. Accessing I2P from a .bit TLD is not secure and shouldn't be implemented this way. There are several unclear decisions in I2P+NameCoin integration:
+
+* Should we use the same .i2p pseudoTLD or introduce another pseudoTLD dedicated to NameCoin-registered I2P domains
+* Should we use the same "/d" NameCoin namespace (thus granting I2P domain for free for everybody registering .bit domain) or introduce another "/i" namespace dedicated to I2P.
+
+[[User:OCTAGRAM|OCTAGRAM]] 03:59, 16 September 2011 (UTC)
