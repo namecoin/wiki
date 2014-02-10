@@ -44,9 +44,9 @@ The JSON Object (the ''domain configuration'') is an associative array of config
     "service" : [ ["smtp", "tcp", 10, 0, 25, "mail"] ]
     "tls": {
         "tcp": {
-            443: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
+            "443": [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
         } {
-            25: [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
+            "25" : [ [1, "660008F91C07DCF9058CDD5AD2BAF6CC9EAE0F912B8B54744CB7643D7621B787", 1] ]
         }
     }
     "map":
