@@ -4,6 +4,7 @@
 * http://getbit.eu — payments accepted: BTC (Bitcoins)
 * http://dotbit.me — payments accepted: BTC (Bitcoins), NMC (Namecoins) or LTC (Litecoins)
 * https://domaincoin.net — payments accepted: BTC (Bitcoins)
+* https://criptodomini.com - payments accepted: BTC (Bitcoins), NMC (Namecoins) LTC (Litecoins) and Paypal
 
 Advantages:
 * No need to run your own node
